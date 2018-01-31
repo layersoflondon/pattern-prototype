@@ -1,2 +1,7 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<ul>
+  <% Dir.glob(File.join(Rails.root, 'app', 'views', 'layouts', 'templates', '*.html.erb')).each do |template| %>
+    <li>
+      <%= link_to File.basename(template), page_path(File.basename(template).split(".").first) %>
+    </li>
+  <% end %>
+</ul>

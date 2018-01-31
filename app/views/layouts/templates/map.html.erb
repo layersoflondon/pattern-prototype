@@ -11,7 +11,9 @@
   <%= render "global/header" %>
 
   <body>
-    <%= yield %>
+    <p>
+    <%= File.basename __FILE__ %>
+    </p>
   </body>
 
   <%= render "global/footer" %>
