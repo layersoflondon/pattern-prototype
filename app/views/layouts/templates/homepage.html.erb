@@ -12,8 +12,10 @@
 
   <body>
     <p>
-    <%= File.basename __FILE__ %>
+    layouts/templates/<%= File.basename __FILE__ %>
     </p>
+
+    <%= render "list" %>
   </body>
 
   <%= render "global/footer" %>
