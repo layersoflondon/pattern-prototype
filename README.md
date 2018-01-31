@@ -1,24 +1,20 @@
-# README
+# Layers of London Pattern Prototype
+This is a repository of code for testing user interaction ideas and design. It's a [Rails](https://rubyonrails.org) application, but there isn't really any backend logic.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# To get running
 
-Things you may want to cover:
+* Clone this repo
+* `bundle`
+* `rails s` to run locally on port 3000
 
-* Ruby version
 
-* System dependencies
+# To develop new templates and UI patterns
 
-* Configuration
+* Create a new template in app/views/layouts/templates - e.g. 'mypage.html.erb'
+* Create any partials you need and `render` them in there
+* Your page will be available at http://localhost:3000/mypage
 
-* Database creation
+# Get involved
+You can follow progress of the project at https://github.com/orgs/layersoflondon/projects/1 and raise issues at https://github.com/layersoflondon/application/issues
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
