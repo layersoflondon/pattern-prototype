@@ -1,20 +1,96 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>PatternPrototype</title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+</head>
 
-  <%= render "global/header" %>
+<%= render "global/header" %>
 
-  <body>
-    <p>
-    <%= File.basename __FILE__ %>
-    </p>
-  </body>
+<body>
 
-  <%= render "global/footer" %>
+    <div class="m-map-wrapper">
+
+        <div class="m-sidebar">
+            <div class="m-tools">
+                <div class="m-tool-button m-tool-button--search">
+                    <button><span>Search</span></button>
+                </div>
+                <div class="m-tool-button m-tool-button--date-range">
+                    <button><span>Date range</span></button>
+                </div>
+                <div class="m-tool-button m-tool-button--layers">
+                    <button><span>Layers</span></button>
+                </div>
+                <div class="m-tool-button m-tool-button--add">
+                    <button><span>Add record</span></button>
+                </div>
+            </div>
+            <div class="m-actions">
+                <div class="m-tool-button m-tool-button--profile">
+                    <button><span>Your profile</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-tray-area">
+            <div class="m-tray-title-area"></div>
+            <div class="m-tray-records-list">
+                <div class="m-record-card">
+                    <div class="image"></div>
+                    <div class="text-content">
+                        <h1>Donec pretium elementum interdum</h1>
+                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Nunc
+                            feugiat porttitor sapien. Donec luctus.</p>
+                    </div>
+                </div>
+                <div class="m-record-card">
+                    <div class="image"></div>
+                    <div class="text-content">
+                        <h1>Donec pretium elementum interdum</h1>
+                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Nunc
+                            feugiat porttitor sapien. Donec luctus.</p>
+                    </div>
+                </div>
+                <div class="m-record-card">
+                    <div class="image"></div>
+                    <div class="text-content">
+                        <h1>Donec pretium elementum interdum</h1>
+                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Nunc
+                            feugiat porttitor sapien. Donec luctus.</p>
+                    </div>
+                </div>
+                <div class="m-record-card">
+                    <div class="image"></div>
+                    <div class="text-content">
+                        <h1>Donec pretium elementum interdum</h1>
+                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                            Nunc
+                            feugiat porttitor sapien. Donec luctus.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-map-area">
+            <div class="m-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39712.10659670108!2d0.07166910252206475!3d51.53143763748735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a590b42c329b%3A0x20d6d63bbad734a3!2sBarking!5e0!3m2!1sen!2suk!4v1517583160958" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <div class="m-map-popover"></div>
+            <div class="m-map-zoom-controls"></div>
+            <div class="m-map-show-as-list"></div>
+            <div class="m-map-layer-controls"></div>
+        </div>
+
+    </div>
+
+</body>
+
+<%= render "global/footer" %>
 </html>

@@ -1,0 +1,24 @@
+// Record card
+
+.m-record-card {
+  background:#fff;
+  margin-bottom:10px;
+  width:calc(50% - 10px);
+  float:left;
+  margin-left:10px;
+}
+
+.m-record-card .image {
+  width:100%;
+  padding-bottom:40%;
+  background:#333;
+}
+
+.m-record-card .text-content {
+  padding:10px;
+  @include top-and-tail;
+}
+
+.m-record-card h1 {
+  font-size:16px;
+}

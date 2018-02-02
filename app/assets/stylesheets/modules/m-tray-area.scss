@@ -1,0 +1,12 @@
+// Tray area
+
+.m-tray-area {
+  width:calc(50% - 40px);
+  height:100%;
+  position:absolute;
+  top:0;
+  left:80px;
+  padding:20px;
+  background:#eee;
+  @include top-and-tail;
+}
