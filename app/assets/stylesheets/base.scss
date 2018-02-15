@@ -126,6 +126,14 @@ div[class^='s-'].is-showing {
   display:block;
 }
 
+input[type="submit"] {
+  background:$link-color;
+  color:white;
+  &:hover {
+    background:$link-hover-color;
+  }
+}
+
 /* ==========================================================================
    Print styles
    ========================================================================== */

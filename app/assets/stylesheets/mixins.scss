@@ -1,7 +1,18 @@
 
 /* Mixins */
 
-@mixin round-icon-button {
+@mixin lozenge-button {
+  background:$link-color;
+  color:white;
+  border-radius:100px;
+  border:0;
+  padding: 3px 11px;
+  &:hover {
+    background:$link-hover-color;
+  }
+}
+
+@mixin icon-button {
   width:60px;
   height:60px;
   border-radius:100px;
@@ -31,6 +42,26 @@
     color:$link-hover-color;
   }
 }
+
+@mixin icon-button--small {
+  width:40px;
+  height:40px;
+  &:before {
+    width:40px;
+    height:40px;
+    font: normal normal normal 18px/1 FontAwesome;
+    line-height:40px;
+  }
+}
+
+@mixin icon-button--close--small {
+  @include icon-button;
+  @include icon-button--small;
+  &:before {
+    content: "\f00d";
+  }
+}
+
 // Grid
 
 $gutter-width:10px;

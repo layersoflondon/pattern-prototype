@@ -1,0 +1,19 @@
+// Layers picker
+
+.m-layers-picker {
+
+}
+
+.m-layers-picker .layer {
+  display:inline-block;
+  margin-right:-4px;
+  width:33.333333%;
+  padding-right:10px;
+  margin-bottom:30px;
+}
+
+.m-layers-picker .layer .image {
+  width:100%;
+  padding-bottom:40%;
+  background:#555;
+}

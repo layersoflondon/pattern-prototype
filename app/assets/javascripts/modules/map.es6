@@ -1,7 +1,7 @@
 class Map {
 
     constructor() {
-        this.setupOpenCloseButton();
+        this.setupTrayActions();
         this.setupToolIcons();
         this.setupRecordCards();
         this.setupOverlay();
@@ -9,17 +9,31 @@ class Map {
     }
 
     setupRecordCards() {
-        $('.m-record-card a').click((event) => {
+        $('.m-record-card a').not('.m-record-card--collection a').click((event) => {
             this.showOverlay('record');
+            event.preventDefault();
+        });
+        $('.m-record-card--collection a').click((event) => {
+            this.showTrayContent('collection');
             event.preventDefault();
         });
     }
 
-    setupOpenCloseButton() {
+    setupTrayActions() {
         $('.m-tray-area .open-close').click((event) => {
             $('.m-tray-area').addClass('is-closed');
             $('.m-map-wrapper').addClass('tray-is-closed');
         });
+
+        $('.m-tray-title-area .close button').click((event) => {
+            this.showTrayContent('default');
+        });
+
+        $('.creator-link a').click((event) => {
+            this.showTrayContent('team');
+            event.preventDefault();
+        });
+
     }
 
     setupToolIcons() {
@@ -74,6 +88,16 @@ class Map {
             $('.m-map-popover').css('top', (event.clientY - parentPosition.top - popoverHeight - 40) + 'px');
         });
 
+    }
+
+    showTrayContent(state) {
+        //$('.m-overlay').addClass('is-showing');
+        $('.m-tray-area [class^="s-tray-area"]').removeClass('is-showing');
+        $('.m-tray-area .s-tray-area--' + state).addClass('is-showing');
+    }
+
+    hideOverlay() {
+        $('.m-overlay').removeClass('is-showing');
     }
 }
 

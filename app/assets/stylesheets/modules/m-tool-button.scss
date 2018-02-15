@@ -5,7 +5,25 @@
   background:transparent;
   border:0;
   color:white;
-  padding:10px;
+  padding:15px 10px;
+  position:relative;
+}
+
+.m-tool-button button:after {
+  content:attr(data-label);
+  position:absolute;
+  top: 0;
+  left: 0;
+  padding: 15px 0 15px 50px;
+  text-align:left;
+  font-size: 14px;
+  width: 170px;
+  opacity:0;
+  transition:opacity .2s;
+}
+
+.m-sidebar:hover .m-tool-button button:after {
+  opacity:1;
 }
 
 .m-tool-button button:before {
@@ -25,7 +43,7 @@
 }
 
 .m-tool-button--add-collection button:before {
-  content: "\f24a";
+  content: "\f24d";
 }
 
 .m-tool-button--add button:before {

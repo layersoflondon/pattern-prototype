@@ -1,0 +1,39 @@
+// Search overlay
+
+.m-search-overlay input {
+  font-size: 30px;
+  border:none;
+  padding: 20px;
+}
+
+.m-search-overlay input[type="text"] {
+  width: calc(100% - 170px);
+  margin-right:-5px;
+}
+
+.m-search-overlay input[type="submit"] {
+  width: 170px;
+}
+
+.m-search-overlay .form-group--primary-field {
+  margin-bottom:50px;
+}
+
+.m-search-overlay .form-group--checklist  {
+  width:50%;
+  float:left;
+}
+
+.m-search-overlay .form-group--checklist label {
+  display:block;
+  margin:0 0 6px 0;
+}
+
+.m-search-overlay .form-group--checklist input[type="checkbox"] {
+  margin-right:6px;
+}
+
+.m-search-overlay .helper-text {
+  display:block;
+  margin-bottom:6px;
+}

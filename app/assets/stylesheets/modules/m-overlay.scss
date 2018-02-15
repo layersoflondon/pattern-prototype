@@ -16,7 +16,24 @@
   color:white;
 }
 
-
 .m-overlay.is-showing {
   display:block;
+}
+
+.m-overlay .close {
+  display:block;
+}
+
+.m-overlay .close button {
+  @include icon-button;
+}
+
+.m-overlay .close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.m-overlay .close button:before {
+  content: "\f00d";
 }

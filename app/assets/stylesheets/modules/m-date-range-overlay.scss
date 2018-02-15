@@ -1,0 +1,24 @@
+// Date range overlay
+
+.m-date-range-overlay .header {
+  float: left;
+  width: 50%;
+  @include top-and-tail;
+}
+
+.m-date-range-overlay .header button {
+  @include lozenge-button;
+}
+
+.m-date-range-overlay .eras {
+  float: left;
+  width: 50%;
+  @include unlist;
+  font-size: 20px;
+  border-left: 2px solid #444;
+}
+
+.m-date-range-overlay .eras li {
+  margin-bottom: 20px;
+  margin-left: 40px;
+}

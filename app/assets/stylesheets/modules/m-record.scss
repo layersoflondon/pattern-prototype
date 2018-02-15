@@ -16,7 +16,7 @@
 .m-record .previous button,
 .m-record .close button,
 .m-record .actions button {
-  @include round-icon-button;
+  @include icon-button;
 }
 
 .m-record .next {
