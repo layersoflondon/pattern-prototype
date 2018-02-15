@@ -82,13 +82,13 @@ textarea {
 }
 
 a {
-    color:$blue;
+    color:$link-color;
     text-decoration:none;
     @include transition(color .2s);
 }
 
 a:hover {
-    color:lighten($blue, 10%);
+    color:$link-hover-color;
 }
 
 .grid {
@@ -116,6 +116,14 @@ a:hover {
     background:orange;
     margin:0 auto;
     margin-top:100px;
+}
+
+div[class^='s-'] {
+  display:none;
+}
+
+div[class^='s-'].is-showing {
+  display:block;
 }
 
 /* ==========================================================================

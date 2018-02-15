@@ -6,7 +6,37 @@
   position:absolute;
   top:0;
   left:80px;
-  padding:20px;
   background:#eee;
   @include top-and-tail;
+}
+
+.m-tray-area .window {
+  padding:20px;
+  overflow: scroll;
+  height:100%;
+}
+
+.m-tray-area .open-close {
+  position:absolute;
+  top:50%;
+  right:-40px;
+  background:#eee;
+  border-radius:0 100px 100px 0;
+  display:block;
+  z-index: 10;
+  height:80px;
+  width:40px;
+}
+
+.m-tray-area .open-close:before {
+    content: "\f0da";
+    font: normal normal normal 24px/1 FontAwesome;
+}
+
+.m-tray-area .open-close span {
+  display:none;
+}
+
+.tray-is-closed .m-tray-area {
+  display:none;
 }

@@ -1,7 +1,36 @@
 
 /* Mixins */
 
-
+@mixin round-icon-button {
+  width:60px;
+  height:60px;
+  border-radius:100px;
+  background:white;
+  border:0;
+  padding: 0;
+  position:relative;
+  top: 0;
+  right:0;
+  bottom:0;
+  left:0;
+  color:$link-color;
+  @include kellum;
+  &:before {
+    content: "\f0da";
+    font: normal normal normal 24px/1 FontAwesome;
+    position:absolute;
+    width:60px;
+    height:60px;
+    line-height:60px;
+    text-align:center;
+    top: 0;
+    left: 0;
+    text-indent: 0;
+  }
+  &:hover {
+    color:$link-hover-color;
+  }
+}
 // Grid
 
 $gutter-width:10px;

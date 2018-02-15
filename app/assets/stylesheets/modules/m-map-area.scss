@@ -7,3 +7,7 @@
   right: 0;
   height: 100%;
 }
+
+.tray-is-closed .m-map-area {
+  width: calc(100% - 80px);
+}

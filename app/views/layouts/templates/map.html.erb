@@ -5,10 +5,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-</head>
 
-<%= render "global/header" %>
+</head>
 
 <body>
 
@@ -25,72 +23,91 @@
                 <div class="m-tool-button m-tool-button--layers">
                     <button><span>Layers</span></button>
                 </div>
+                <div class="m-tool-button m-tool-button--add-collection">
+                    <button><span>Add collection</span></button>
+                </div>
                 <div class="m-tool-button m-tool-button--add">
                     <button><span>Add record</span></button>
                 </div>
             </div>
             <div class="m-actions">
-                <div class="m-tool-button m-tool-button--profile">
+                <div class="m-tool-button m-tool-button--your-account">
                     <button><span>Your profile</span></button>
                 </div>
             </div>
         </div>
 
         <div class="m-tray-area">
-            <div class="m-tray-title-area"></div>
-            <div class="m-tray-records-list">
-                <div class="m-record-card">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <h1>Donec pretium elementum interdum</h1>
-                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            Nunc
-                            feugiat porttitor sapien. Donec luctus.</p>
-                    </div>
-                </div>
-                <div class="m-record-card">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <h1>Donec pretium elementum interdum</h1>
-                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            Nunc
-                            feugiat porttitor sapien. Donec luctus.</p>
-                    </div>
-                </div>
-                <div class="m-record-card">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <h1>Donec pretium elementum interdum</h1>
-                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            Nunc
-                            feugiat porttitor sapien. Donec luctus.</p>
-                    </div>
-                </div>
-                <div class="m-record-card">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <h1>Donec pretium elementum interdum</h1>
-                        <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                            Nunc
-                            feugiat porttitor sapien. Donec luctus.</p>
-                    </div>
-                </div>
+            <div class="open-close">
+                <span>Close</span>
+            </div>
+            <div class="window">
+                <%= render "shared/s-tray-area--default" %>
+                <%= render "shared/s-tray-area--collection" %>
+                <%= render "shared/s-tray-area--team" %>
+                <%= render "shared/s-tray-area--creator" %>
+                <%= render "shared/s-tray-area--multiple-records" %>
             </div>
         </div>
 
         <div class="m-map-area">
-            <div class="m-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39712.10659670108!2d0.07166910252206475!3d51.53143763748735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a590b42c329b%3A0x20d6d63bbad734a3!2sBarking!5e0!3m2!1sen!2suk!4v1517583160958" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="m-map-popover">
+                <div class="m-record-card">
+                    <a href="#">
+                        <div class="image"></div>
+                        <div class="text-content">
+                            <h1>Donec pretium elementum interdum</h1>
+                            <p>Curabitur eget feugiat odio. Interdum et malesuada fames ac ante ipsum primis in
+                                faucibus. Nunc feugiat porttitor sapien. Donec luctus.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="m-map-popover"></div>
+            <div class="m-map">
+
+                <div id="map"></div>
+                <script>
+                    var map;
+
+                    function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                            center: {lat: 51.519473, lng: -0.108727},
+                            zoom: 12
+                        });
+                        for (i = 0; i < 40; i++) {
+                            var marker = new google.maps.Marker({
+                                position: {
+                                    lat: 51.444410 + (Math.random() * 0.134487),
+                                    lng: -0.190448 + (Math.random() * 0.179957)
+                                },
+                                map: map
+                            });
+                        }
+                    }
+                </script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJCmva_6AWOfc__sH-Rv6herFIkuEBa0&callback=initMap"
+                        async defer></script>
+
+            </div>
             <div class="m-map-zoom-controls"></div>
             <div class="m-map-show-as-list"></div>
             <div class="m-map-layer-controls"></div>
+        </div>
+
+        <div class="m-overlay is-showing">
+            <%= render "shared/s-overlay--search" %>
+            <%= render "shared/s-overlay--date-range" %>
+            <%= render "shared/s-overlay--layers" %>
+            <%= render "shared/s-overlay--add-collection" %>
+            <%= render "shared/s-overlay--add" %>
+            <%= render "shared/s-overlay--your-account" %>
+            <%= render "shared/s-overlay--record" %>
         </div>
 
     </div>
 
 </body>
 
-<%= render "global/footer" %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
 </html>

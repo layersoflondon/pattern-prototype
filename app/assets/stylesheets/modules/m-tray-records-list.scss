@@ -4,3 +4,10 @@
 .m-tray-records-list {
   margin-left:-10px;
 }
+
+.m-tray-records-list .m-record-card {
+  margin-bottom:10px;
+  width:calc(50% - 10px);
+  float:left;
+  margin-left:10px;
+}

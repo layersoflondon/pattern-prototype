@@ -1,0 +1,112 @@
+// Record
+
+.m-record .wrap {
+  background: white;
+  color: #333;
+  padding: 40px;
+  max-width: 900px;
+  margin-top: 50px;
+}
+
+.m-record .wrap h1 {
+  margin-top:0;
+}
+
+.m-record .next button,
+.m-record .previous button,
+.m-record .close button,
+.m-record .actions button {
+  @include round-icon-button;
+}
+
+.m-record .next {
+  position: fixed;
+  top: 200px;
+  right: 20px;
+}
+
+.m-record .next button:before {
+  content: "\f0da";
+}
+
+.m-record .previous {
+  position: fixed;
+  top: 200px;
+  left: 20px;
+}
+
+.m-record .previous button:before {
+  content: "\f0d9";
+}
+
+.m-record .close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.m-record .close button:before {
+  content: "\f00d";
+}
+
+.m-record .actions {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.m-record .actions button {
+  display: block;
+}
+
+.m-record .actions button + button {
+  margin-top: 10px;
+}
+
+.m-record .actions .add-to-collection:before {
+  content: "\f24d";
+}
+
+.m-record .actions .contact-owner:before {
+  content: "\f0e0";
+}
+
+.m-record .actions .flag:before {
+  content: "\f024";
+}
+
+.m-record .actions .like:before {
+  content: "\f164";
+}
+
+.m-record .actions .edit:before {
+  content: "\f040";
+}
+
+.m-record .m-social-status {
+  float: right;
+}
+
+.m-record .meta ul {
+  @include unlist;
+}
+
+.m-record .meta h4 {
+  font-weight: normal;
+  display: inline;
+}
+
+.m-record .attribution ul {
+  @include unlist;
+}
+
+.m-record .attribution h4 {
+  font-weight: normal;
+  display: inline;
+}
+
+.m-record-hero {
+  background: #eee;
+  height: 400px;
+  margin: 40px -40px;
+}

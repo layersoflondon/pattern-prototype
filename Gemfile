@@ -56,3 +56,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'sprockets-es6'
 
 gem 'faker'
+
+gem 'jquery-rails'

@@ -1,0 +1,22 @@
+// Overlay
+
+.m-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  overflow: scroll;
+  display:none;
+}
+
+.m-overlay .wrap {
+  max-width:700px;
+  margin:100px auto;
+  color:white;
+}
+
+
+.m-overlay.is-showing {
+  display:block;
+}

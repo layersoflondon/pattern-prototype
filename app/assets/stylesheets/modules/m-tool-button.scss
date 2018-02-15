@@ -24,11 +24,15 @@
   content: "\f24a";
 }
 
+.m-tool-button--add-collection button:before {
+  content: "\f24a";
+}
+
 .m-tool-button--add button:before {
   content: "\f067";
 }
 
-.m-tool-button--profile button:before {
+.m-tool-button--your-account button:before {
   content: "\f2c0";
 }
 

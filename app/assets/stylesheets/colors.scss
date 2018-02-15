@@ -22,3 +22,6 @@ $white:  #FFFFFF;
 $silver: #DDDDDD;
 $gray:   #AAAAAA;
 $black:  #111111;
+
+$link-color:  $blue;
+$link-hover-color:  lighten($link-color, 30%);
