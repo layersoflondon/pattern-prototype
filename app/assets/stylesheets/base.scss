@@ -134,6 +134,15 @@ input[type="submit"] {
   }
 }
 
+.random-image{
+  background-size:cover ;
+  background-position: center;
+}
+
+button {
+  @include lozenge-button;
+}
+
 /* ==========================================================================
    Print styles
    ========================================================================== */

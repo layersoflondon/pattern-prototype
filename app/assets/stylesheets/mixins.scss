@@ -1,6 +1,18 @@
 
 /* Mixins */
 
+@mixin big-square-button {
+  background:$link-color;
+  color:white;
+  //border-radius:100px;
+  border:0;
+  padding: 11px 16px;
+  font-size:32px;
+  &:hover {
+    background:$link-hover-color;
+  }
+}
+
 @mixin lozenge-button {
   background:$link-color;
   color:white;

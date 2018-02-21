@@ -1,0 +1,148 @@
+<div class="s-overlay--add-record">
+
+    <div class="close">
+        <button class="close">Close</button>
+    </div>
+
+    <div class="m-add-record">
+
+        <div class="wrap">
+
+            <h1>Add record</h1>
+
+            <form class="form--chunky">
+
+                <div class="form-group form-group--date">
+                    <label>When did this happen?</label>
+                    <input type="text" placeholder="Day"/>
+                    <input type="text" placeholder="Month"/>
+                    <input type="text" placeholder="Year"/>
+                    <span class="helper-text">Don’t worry too much, an estimated year is acceptable - an exact date is fantastic! Do you want to add an end date? Really useful for things like events, and places that may no longer exist.</span>
+                </div>
+
+                <div class="form-group form-group--title">
+                    <label>Title</label>
+                    <input type="text" placeholder=""/>
+                </div>
+
+                <div class="form-group">
+                    <span class="place">Place: Palace St, Westminster, London SW1E | 51.497275, -0.139333</span>
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="10" placeholder=""></textarea>
+                </div>
+
+                <div class="m-accordion">
+
+                    <div class="section">
+                        <h2 class="title">Add images</h2>
+                        <div class="pane">
+                            <div class="m-add-images">
+                                <div class="image-block">
+                                    <div class="image random-image"></div>
+                                    <div class="caption">
+                                        <div class="form-group">
+                                            <label>Caption</label>
+                                            <textarea rows="5" placeholder="Caption"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Credit</label>
+                                            <input type="text" placeholder="Credit"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="image-block">
+                                    <div class="image random-image"></div>
+                                    <div class="caption">
+                                        <div class="form-group">
+                                            <label>Caption</label>
+                                            <textarea rows="5" placeholder="Caption"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Credit</label>
+                                            <input type="text" placeholder="Credit"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button>Add another image</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Add a link</h2>
+                        <div class="pane">
+                            <div class="m-add-links">
+                                <div class="form-group">
+                                    <!--<label>Link</label>-->
+                                    <input type="text" placeholder="http://www.bbc.co.uk for example"/>
+                                </div>
+                                <button>Add another link</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Upload files</h2>
+                        <div class="pane">
+                            <div class="m-add-files">
+                                <div class="file-block">
+                                    <div class="file"></div>
+                                    <div class="caption">
+                                        <div class="form-group">
+                                            <label>Name</label>
+                                            <input type="text" placeholder="Name"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Description</label>
+                                            <textarea rows="5" placeholder="Description"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button>Add another file</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="title">Add to a collection</h2>
+                        <div class="pane">
+                            <div class="m-add-to-collection">
+                                <div class="form-group form-group--checkboxes-columns">
+
+                                    <label>
+                                        <input type="radio" checked="checked"/>
+                                        <span>Your collections</span>
+                                        <span class="helper-text">Yours + any that belong to teams you are in.</span>
+                                    </label>
+                                    <label>
+                                        <input type="radio"/>
+                                        <span>Public collections</span>
+                                        <!--<span class="helper-text">Only you can edit.</span>-->
+                                    </label>
+
+                                </div>
+                                <div class="form-group">
+                                    <select placeholder="Collection">
+                                        <option>Collection One</option>
+                                        <option>Collection Two</option>
+                                        <option>Collection Three</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <button class="delete">Delete</button>
+                <input type="submit" value="Save"/>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

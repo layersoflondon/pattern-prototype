@@ -1,43 +1,60 @@
 <div class="s-overlay--add-collection">
 
-    <div class="close">
-        <button class="close">Close</button>
-    </div>
+    <div class="m-add-collection">
 
-    <div class="wrap">
-
-        <h1>Add collection</h1>
-
-        <div class="form-group">
-            <input type="text" placeholder="Enter a place or topic…"/>
-            <input type="submit" value="Search"/>
+        <div class="close">
+            <button class="close">Close</button>
         </div>
 
-        <div class="form-group">
-            <span class="helper-text">Find records including:</span>
-            <label>
-                <input type="checkbox"/>
-                <span>Images</span>
-            </label>
-            <label>
-                <input type="checkbox"/>
-                <span>Video</span>
-            </label>
-            <label>
-                <input type="checkbox"/>
-                <span>Audio</span>
-            </label>
-            <label>
-                <input type="checkbox"/>
-                <span>File uploads</span>
-            </label>
-        </div>
+        <div class="wrap">
 
-        <div class="form-group">
-            <label>
-                <input type="checkbox"/>
-                <span>Search visible map area only</span>
-            </label>
+            <h1>Create collection</h1>
+
+            <form class="form--chunky">
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder=""/>
+
+                </div>
+
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea rows="10" placeholder=""></textarea>
+                </div>
+
+                <div class="form-group form-group--checkboxes-columns">
+
+                    <span class="label">Ownership</span>
+                    <label>
+                        <input type="radio" checked="checked" />
+                        <span>Public</span>
+                        <span class="helper-text">Anyone can edit.</span>
+                    </label>
+                    <label>
+                        <input type="radio"/>
+                        <span>Personal</span>
+                        <span class="helper-text">Only you can edit.</span>
+                    </label>
+                    <label>
+                        <input type="radio"/>
+                        <span>Team</span>
+                        <span class="helper-text">Anyone in the team can edit.</span>
+                        <div class="form-group">
+                            <select placeholder="Team">
+                                <option>Team One</option>
+                                <option>Team Two</option>
+                                <option>Team Three</option>
+                            </select>
+                        </div>
+                    </label>
+
+                </div>
+
+                <input type="submit" value="Save"/>
+
+            </form>
+
         </div>
 
     </div>
