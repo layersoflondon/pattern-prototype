@@ -134,7 +134,7 @@
                             scaledSize: new google.maps.Size(22, 30)
                         };
 
-                        for (i = 0; i < 20; i++) {
+                        for (i = 0; i < 50; i++) {
                             var marker = new google.maps.Marker({
                                 position: {
                                     lat: 51.444410 + (Math.random() * 0.134487),
@@ -173,7 +173,6 @@
                             placeMarkers.push(marker);
 
                             marker.addListener('click', function (event) {
-                                console.log('place click');
                                 prototypeFunctionality.placeClicks(event.pixel.x, event.pixel.y);
                             });
                         }
