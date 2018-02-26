@@ -47,6 +47,7 @@
                 <%= render "shared/s-tray-area--team" %>
                 <%= render "shared/s-tray-area--creator" %>
                 <%= render "shared/s-tray-area--multiple-records" %>
+                <%= render "shared/s-tray-area--search-results" %>
             </div>
         </div>
 
@@ -112,7 +113,8 @@
                 <div id="map"></div>
                 <script>
                     var map;
-                    var markers = [];
+                    var placeMarkers = [];
+                    var recordMarkers = [];
 
                     function initMap() {
 
@@ -120,8 +122,17 @@
                             center: {lat: 51.519473, lng: -0.108727},
                             zoom: 12,
                             fullscreenControl:false,
-                            streetViewControl: false
+                            streetViewControl: false,
+                            clickableIcons: false
                         });
+
+                        // Records
+
+                        var recordImage = {
+                            url: 'http://localhost:3000/record-marker.svg',
+                            size: new google.maps.Size(22, 30),
+                            scaledSize: new google.maps.Size(22, 30)
+                        };
 
                         for (i = 0; i < 20; i++) {
                             var marker = new google.maps.Marker({
@@ -129,19 +140,21 @@
                                     lat: 51.444410 + (Math.random() * 0.134487),
                                     lng: -0.190448 + (Math.random() * 0.179957)
                                 },
+                                icon: recordImage,
                                 map: map
                             });
-                            markers.push(marker);
+                            recordMarkers.push(marker);
 
                             marker.addListener('click', function (event) {
-                                console.log('marker click');
                                 prototypeFunctionality.markerClicks(event.pixel.x, event.pixel.y);
                             });
 
                         }
 
+                        // Places
+
                         var image = {
-                            url: 'http://localhost:3000/place-marker.svg',
+                            url: 'http://localhost:3000/place-marker-purple.svg',
                             size: new google.maps.Size(12, 12),
                             scaledSize: new google.maps.Size(12, 12)
                         };
@@ -156,7 +169,8 @@
                                 icon: image,
                                 map: map
                             });
-                            markers.push(marker);
+
+                            placeMarkers.push(marker);
 
                             marker.addListener('click', function (event) {
                                 console.log('place click');
@@ -167,19 +181,45 @@
                         map.addListener('click', function (event) {
                             prototypeFunctionality.mapClicks(event.pixel.x, event.pixel.y);
                         });
+
+                        hidePlaceMarkers();
                     }
 
-                    // Sets the map on all markers in the array.
-                    function setMapOnAll(map) {
-                        for (var i = 0; i < markers.length; i++) {
-                            markers[i].setMap(map);
+                    function showPlaceMarkers() {
+                        for (var i = 0; i < placeMarkers.length; i++) {
+                            placeMarkers[i].setMap(map);
                         }
                     }
 
-                    // Removes the markers from the map, but keeps them in the array.
-                    function clearMarkers() {
-                        setMapOnAll(null);
+                    function hidePlaceMarkers() {
+                        for (var i = 0; i < placeMarkers.length; i++) {
+                            placeMarkers[i].setMap(null);
+                        }
                     }
+
+                    function showRecordMarkers() {
+                        for (var i = 0; i < recordMarkers.length; i++) {
+                            recordMarkers[i].setMap(map);
+                        }
+                    }
+
+                    function hideRecordMarkers() {
+                        for (var i = 0; i < recordMarkers.length; i++) {
+                            recordMarkers[i].setMap(null);
+                        }
+                    }
+
+
+                    function showAllMarkers() {
+                        showPlaceMarkers();
+                        showRecordMarkers();
+                    }
+
+                    function hideAllMarkers() {
+                        hidePlaceMarkers();
+                        hideRecordMarkers();
+                    }
+
 
                 </script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJCmva_6AWOfc__sH-Rv6herFIkuEBa0&callback=initMap"

@@ -124,8 +124,8 @@ class Map {
         $('.m-record-card h1').each(function () {
             var memoryNum = Math.floor(Math.random() * memoryType.length);
             var placeNum = Math.floor(Math.random() * placeNames.length);
-            $(this).text(memoryType[memoryNum] + ' ' + memoryNum + ' ' + placeNames[placeNum] + ' ' + placeNum);
-            //$(this).text(memoryType[memoryNum] + ' ' + placeNames[placeNum]);
+            //$(this).text(memoryType[memoryNum] + ' ' + memoryNum + ' ' + placeNames[placeNum] + ' ' + placeNum);
+            $(this).text(memoryType[memoryNum] + ' ' + placeNames[placeNum]);
         });
 
         $('.m-record-card a').not('.m-record-card--collection a').click((event) => {
@@ -162,7 +162,7 @@ class Map {
             $('.m-map-wrapper').addClass('tray-is-closed');
             $('.m-map-wrapper').addClass('showing-place-picker');
             $('.m-place-picker').addClass('is-showing');
-            clearMarkers();
+            hideAllMarkers();
         });
         $('.m-tool-button--your-account').click((event) => {
             this.showOverlay('your-account--details');
@@ -257,6 +257,10 @@ class Map {
 
         $('.m-search-overlay input[type="submit"]').click((event) => {
             this.hideOverlay();
+            showPlaceMarkers();
+            var searchTerm = $('.m-search-overlay input[type="text"]').val();
+            $('.m-tray-title-area--search-results h1').text('"' + searchTerm + '"');
+            this.showTrayContent('search-results');
             event.preventDefault();
         });
 
@@ -370,6 +374,7 @@ class Map {
             $('.m-add-record').removeClass('is-edit-mode');
             this.showOverlay('add-record');
             $('.m-map-wrapper').removeClass('showing-place-picker');
+            showAllMarkers();
         }
 
     }
