@@ -219,7 +219,6 @@ class Map {
     showOverlay(state) {
         $('.m-overlay').addClass('is-showing');
         $('.m-overlay [class^="s-overlay"]').removeClass('is-showing');
-        console.log('Overlay: ' + '.m-overlay .s-overlay--' + state)
         $('.m-overlay .s-overlay--' + state).addClass('is-showing');
     }
 
