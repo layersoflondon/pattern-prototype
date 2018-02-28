@@ -92,7 +92,6 @@
 }
 
 .m-record .meta h4 {
-  font-weight: normal;
   display: inline;
 }
 
@@ -105,6 +104,14 @@
   display: inline;
 }
 
+.m-record .meta {
+  font-weight:bold;
+  float: right;
+  margin: 0 0 20px 20px;
+  background: #eee;
+  padding: 10px 14px;
+}
+
 .m-record-hero {
   background: #eee;
   height: 400px;
@@ -115,3 +122,4 @@
 width:100%;
   height:100%;
 }
+

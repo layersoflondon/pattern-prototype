@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <title>PatternPrototype</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!--<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+
 
 </head>
 
@@ -48,6 +52,7 @@
                 <%= render "shared/s-tray-area--creator" %>
                 <%= render "shared/s-tray-area--multiple-records" %>
                 <%= render "shared/s-tray-area--search-results" %>
+                <%= render "shared/s-tray-area--introduction" %>
             </div>
         </div>
 
@@ -230,7 +235,7 @@
             <div class="m-map-layer-controls"></div>
         </div>
 
-        <div class="m-overlay">
+        <div class="m-overlay is-showing">
             <%= render "shared/s-overlay--search" %>
             <%= render "shared/s-overlay--date-range" %>
             <%= render "shared/s-overlay--layers" %>

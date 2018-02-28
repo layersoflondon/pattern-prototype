@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
+
     <title>QPatternPrototype</title>
     <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
-  </head>
+</head>
 
-  <%= render "global/header" %>
+<%= render "global/header" %>
 
-  <body>
+<body>
     <%= yield %>
-  </body>
+</body>
 
-  <%= render "global/footer" %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<%= render "global/footer" %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 </html>

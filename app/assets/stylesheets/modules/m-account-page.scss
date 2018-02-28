@@ -104,6 +104,25 @@
   padding-right: 0;
 }
 
+// Details
+
+.m-account-page--details .form-group--description {
+  width: calc(100% - 200px);
+  padding-right: 20px;
+  float: left;
+}
+
+.m-account-page--details .form-group--profile-pic {
+  width: 200px;
+  float: left;
+  height: 331px;
+}
+
+.m-account-page--details .form-group--profile-pic .image {
+  width: 200px;
+  height: 200px;
+  background: url('/profile-pic.png') center/cover;
+}
 
 // Team
 

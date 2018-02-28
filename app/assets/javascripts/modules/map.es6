@@ -15,6 +15,7 @@ class Map {
         this.setupOverlay();
         this.setupOverlaySubnavigation();
         this.setupSearchOverlay();
+        this.setupDateRangeOverlay();
         this.setupLayersOverlay();
         this.setupCreateCollectionOverlay();
         this.setupYourAccountOverlay();
@@ -259,6 +260,25 @@ class Map {
             showPlaceMarkers();
             var searchTerm = $('.m-search-overlay input[type="text"]').val();
             $('.m-tray-title-area--search-results h1').text('"' + searchTerm + '"');
+            this.showTrayContent('search-results');
+            event.preventDefault();
+        });
+
+    }
+
+    setupDateRangeOverlay() {
+
+        $('.m-date-range-overlay > button').click((event) => {
+            this.hideOverlay();
+            $('.m-tray-title-area--search-results h1').text('1941 – 1945');
+            this.showTrayContent('search-results');
+            event.preventDefault();
+        });
+
+        $('.m-date-range-overlay .eras a').click((event) => {
+            this.hideOverlay();
+            var searchTerm = $(event.currentTarget).text();
+            $('.m-tray-title-area--search-results h1').text(searchTerm);
             this.showTrayContent('search-results');
             event.preventDefault();
         });

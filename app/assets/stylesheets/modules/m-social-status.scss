@@ -1,6 +1,10 @@
 
 // Social status
 
-.m-social-status {
+.m-social-status button {
 
+}
+
+.m-social-status button.like:before {
+  content: "\f164";
 }

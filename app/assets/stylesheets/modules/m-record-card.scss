@@ -1,12 +1,23 @@
 // Record card
 
 .m-record-card {
-  background: #e6e5e5;
   font-size: 14px;
 }
 
-.m-map-area .m-record-card {
-  background:white;
+.m-record-card a {
+  color: inherit;
+  display: block;
+  background: #e6e5e5;
+  transition: all .2s;
+}
+
+.m-record-card a:hover {
+  background: darken(#e6e5e5, 10%);
+  color: lighten(#222, 10%);
+}
+
+.m-map-area .m-record-card a {
+  background: white;
 }
 
 .m-record-card .image {
@@ -21,8 +32,13 @@
 
 .m-record-card h1 {
   font-size: 16px;
-  margin-top:0;
-  clear:left;
+  margin-top: 3px !important;
+  margin-bottom: 6px;
+  clear: left;
+}
+
+.m-record-card p {
+  margin: 0 0 10px 0;
 }
 
 .m-record-card .collection-indicator {
@@ -34,4 +50,9 @@
   float: left;
   text-transform: uppercase;
   font-weight: 700;
+  transition: all .2s;
+}
+
+.m-record-card a:hover .collection-indicator {
+  background: darken(#e6e5e5, 10%);
 }
