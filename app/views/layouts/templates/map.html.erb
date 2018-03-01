@@ -128,7 +128,15 @@
                             zoom: 12,
                             fullscreenControl:false,
                             streetViewControl: false,
-                            clickableIcons: false
+                            clickableIcons: false,
+                            styles: [
+                                {
+                                    "featureType": "poi",
+                                    "stylers": [
+                                        { "visibility": "off" }
+                                    ]
+                                }
+                            ]
                         });
 
                         // Records
@@ -235,7 +243,7 @@
             <div class="m-map-layer-controls"></div>
         </div>
 
-        <div class="m-overlay is-showing">
+        <div class="m-overlay">
             <%= render "shared/s-overlay--search" %>
             <%= render "shared/s-overlay--date-range" %>
             <%= render "shared/s-overlay--layers" %>

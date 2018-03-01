@@ -34,8 +34,8 @@
 
 .form--chunky input[type="submit"] {
   @include big-square-button;
-  width:auto;
-  float:right;
+  width: auto;
+  float: right;
 }
 
 .form--chunky .form-group--checkboxes-columns label {
@@ -55,6 +55,31 @@
 }
 
 .form--chunky .form-group--checkboxes-columns label .helper-text {
-  display:block;
-  margin-top:20px;
+  display: block;
+  margin-top: 20px;
+}
+
+.form--chunky .form-group--checkboxes-rows label {
+  display: block;
+  vertical-align: top;
+  margin-right: -3px;
+  text-transform: none;
+  font-size: 16px;
+  padding-left: 25px;
+}
+
+.form--chunky .form-group--checkboxes-rows input {
+  float: left;
+  margin-left: -25px;
+  width: auto;
+}
+
+.form--chunky .in-context-input {
+  margin:0 6px;
+}
+
+.m-add-collection .form-group--checkboxes-rows {
+  width:50%;
+  float:left;
+  padding-right:30px;
 }

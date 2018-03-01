@@ -23,30 +23,35 @@
                     <textarea rows="10" placeholder=""></textarea>
                 </div>
 
-                <div class="form-group form-group--checkboxes-columns">
+                <div class="form-group form-group--checkboxes-rows">
 
-                    <span class="label">Ownership</span>
+                    <span class="label">Who can see?</span>
                     <label>
-                        <input type="radio" checked="checked" />
-                        <span>Public</span>
-                        <span class="helper-text">Anyone can edit.</span>
+                        <input type="checkbox"/>
+                        <span>Keep this collection private<br/> Only you will see this collection (NB: the records within will still be visible)</span>
+                    </label>
+
+                </div>
+
+                <div class="form-group form-group--checkboxes-rows">
+
+                    <span class="label">Who can edit?</span>
+                    <label>
+                        <input type="radio" checked="checked"/>
+                        <span>Just you</span>
                     </label>
                     <label>
                         <input type="radio"/>
-                        <span>Personal</span>
-                        <span class="helper-text">Only you can edit.</span>
+                        <span>Members of</span>
+                        <select class="in-context-input" placeholder="Team">
+                            <option>Team One</option>
+                            <option>Team Two</option>
+                            <option>Team Three</option>
+                        </select>
                     </label>
                     <label>
                         <input type="radio"/>
-                        <span>Team</span>
-                        <span class="helper-text">Anyone in the team can edit.</span>
-                        <div class="form-group">
-                            <select placeholder="Team">
-                                <option>Team One</option>
-                                <option>Team Two</option>
-                                <option>Team Three</option>
-                            </select>
-                        </div>
+                        <span>Anyone</span>
                     </label>
 
                 </div>
