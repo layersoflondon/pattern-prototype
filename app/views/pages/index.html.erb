@@ -1,7 +1,13 @@
+<h1>Layers of London Prototype</h1>
+<p>This is a static prototype of the layout and functionality of Phase 2 of the Layers of London project. It's intended as a tool to help understand the user experience and interaction design of the project, and doesn't actually store any data. Any photos or text we've included here are randomly generated.</p>
+
+<p><a href="/pages/map">View the main application</a></p>
+
+<h2>Templates</h2>
 <ul>
   <% Dir.glob(File.join(Rails.root, 'app', 'views', 'layouts', 'templates', '*.html.erb')).each do |template| %>
     <li>
-      <%= link_to File.basename(template), page_path(File.basename(template).split(".").first) %>
+      <%= link_to File.basename(template).split(".").first.humanize, page_path(File.basename(template).split(".").first) %>
     </li>
   <% end %>
 </ul>

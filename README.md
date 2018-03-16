@@ -1,6 +1,10 @@
 # Layers of London Pattern Prototype
 This is a repository of code for testing user interaction ideas and design. It's a [Rails](https://rubyonrails.org) application, but there isn't really any backend logic.
 
+# View the prototype
+You can see our work on the prototype at [http://prototype.layersoflondon.org](http://prototype.layersoflondon.org)
+
+
 # To get running
 
 * Clone this repo
