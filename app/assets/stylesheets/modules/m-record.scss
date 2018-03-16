@@ -9,34 +9,11 @@
 }
 
 .m-record .wrap h1 {
-  margin-top:0;
+  margin-top: 0;
 }
 
-.m-record .next button,
-.m-record .previous button,
-.m-record .close button,
-.m-record .actions button {
+.m-record .close button {
   @include icon-button;
-}
-
-.m-record .next {
-  position: fixed;
-  top: 200px;
-  right: 20px;
-}
-
-.m-record .next button:before {
-  content: "\f0da";
-}
-
-.m-record .previous {
-  position: fixed;
-  top: 200px;
-  left: 20px;
-}
-
-.m-record .previous button:before {
-  content: "\f0d9";
 }
 
 .m-record .close {
@@ -49,18 +26,71 @@
   content: "\f00d";
 }
 
-.m-record .actions {
+// Next & previous
+
+.m-record div.next,
+.m-record div.previous {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  top: 200px;
+}
+
+.m-record div.next {
+  right: 40px;
+}
+
+.m-record div.previous {
+  left: 40px;
+}
+
+.m-record div.next button,
+.m-record div.previous button {
+  @include icon-button;
+  background: transparent;
+  color: white;
+  border-radius:0;
+  opacity: 0.3;
+  @include transition(opacity .2s);
+  height: 70px;
+}
+
+.m-record div.next button:hover,
+.m-record div.previous button:hover {
+  opacity: 1;
+  color: white;
+}
+
+
+.m-record div.next button:before,
+.m-record div.previous button:before {
+  font: normal normal normal 78px/1 FontAwesome;
+  content: "\f0da";
+}
+
+.m-record div.next button:before {
+  content: "\f0da";
+}
+
+.m-record div.previous button:before {
+  content: "\f0d9";
+}
+
+// Actions
+
+.m-record .actions {
+  padding-top: 30px;
 }
 
 .m-record .actions button {
   display: block;
+  float: left;
+  padding: 10px 22px;
+  margin-right: 20px;
 }
 
-.m-record .actions button + button {
-  margin-top: 10px;
+.m-record .actions button:before {
+  margin-right: 9px;
+  content: "\f0da";
+  font: normal normal normal 17px/1 FontAwesome;
 }
 
 .m-record .actions .add-to-collection:before {
@@ -83,8 +113,10 @@
   content: "\f040";
 }
 
+.m-record .m-share-record,
 .m-record .m-social-status {
   float: right;
+  margin-left:20px;
 }
 
 .m-record .meta ul {
@@ -104,12 +136,9 @@
   display: inline;
 }
 
-.m-record .meta {
-  font-weight:bold;
-  float: right;
-  margin: 0 0 20px 20px;
-  background: #eee;
-  padding: 10px 14px;
+.m-record .dates {
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .m-record-hero {
@@ -119,7 +148,24 @@
 }
 
 .m-record-hero .image {
-width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
 }
 
+.m-record .place {
+  float: right;
+  width: 200px;
+  margin-left: 30px;
+  margin-top: -70px;
+}
+
+.m-record .place .map {
+  width: 100%;
+  padding-bottom: 100%;
+  background: #ddd url(/mini-map.png) center/cover;
+}
+
+.m-record .place .text {
+  background: #eee;
+  padding: 10px 14px;
+}

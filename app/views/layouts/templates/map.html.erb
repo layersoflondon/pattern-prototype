@@ -116,24 +116,29 @@
             <div class="m-map">
 
                 <div id="map"></div>
+
                 <script>
+
                     var map;
                     var placeMarkers = [];
                     var recordMarkers = [];
+
+                    var recordImage;
+                    var recordImageHighlighted;
 
                     function initMap() {
 
                         map = new google.maps.Map(document.getElementById('map'), {
                             center: {lat: 51.519473, lng: -0.108727},
                             zoom: 12,
-                            fullscreenControl:false,
+                            fullscreenControl: false,
                             streetViewControl: false,
                             clickableIcons: false,
                             styles: [
                                 {
                                     "featureType": "poi",
                                     "stylers": [
-                                        { "visibility": "off" }
+                                        {"visibility": "off"}
                                     ]
                                 }
                             ]
@@ -141,10 +146,16 @@
 
                         // Records
 
-                        var recordImage = {
+                        recordImage = {
                             url: 'http://localhost:3000/record-marker.svg',
                             size: new google.maps.Size(22, 30),
                             scaledSize: new google.maps.Size(22, 30)
+                        };
+
+                        recordImageHighlighted = {
+                            url: 'http://localhost:3000/record-marker-highlighted-2.svg',
+                            size: new google.maps.Size(35, 35),
+                            scaledSize: new google.maps.Size(35, 35)
                         };
 
                         for (i = 0; i < 50; i++) {
@@ -221,6 +232,18 @@
                         }
                     }
 
+                    function bounceRandomMarker() {
+
+                        randomMarker = Math.floor(Math.random() * recordMarkers.length);
+
+                        for (var i = 0; i < recordMarkers.length; i++) {
+                            recordMarkers[i].setIcon(recordImage);
+                        }
+
+                        recordMarkers[randomMarker].setIcon(recordImageHighlighted);
+                        //recordMarkers[randomMarker].setAnimation(google.maps.Animation.BOUNCE);
+
+                    }
 
                     function showAllMarkers() {
                         showPlaceMarkers();
@@ -234,6 +257,7 @@
 
 
                 </script>
+
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHJCmva_6AWOfc__sH-Rv6herFIkuEBa0&callback=initMap"
                         async defer></script>
 
@@ -256,6 +280,7 @@
             <%= render "shared/s-overlay--your-account--team-member-open" %>
             <%= render "shared/s-overlay--your-account--team-member-managed" %>
             <%= render "shared/s-overlay--your-account--records-collections" %>
+            <%= render "shared/s-overlay--your-account--for-teachers" %>
             <%= render "shared/s-overlay--record" %>
         </div>
 

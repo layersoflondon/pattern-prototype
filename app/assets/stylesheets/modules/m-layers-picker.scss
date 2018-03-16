@@ -7,6 +7,15 @@
   max-width: 1000px;
 }
 
+.m-layers-picker .search {
+  float: right;
+  margin-bottom: 30px;
+}
+
+.m-layers-picker .layers {
+  clear:both;
+}
+
 .m-layers-picker .layer {
   display: inline-block;
   margin-right: -4px;
@@ -56,12 +65,12 @@
 }
 
 .m-layers-picker .layer a {
-  color:white;
-  display:block;
+  color: white;
+  display: block;
 }
 
 .m-layers-picker .layer a:hover {
-  color:white;
+  color: white;
 }
 
 .m-layers-picker .layer button {
@@ -94,6 +103,6 @@
 }
 
 .m-layers-picker .layer button.is-selected {
-  background:#eee;
-  color:$link-color;
+  background: #eee;
+  color: $link-color;
 }

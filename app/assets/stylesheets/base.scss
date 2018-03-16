@@ -143,6 +143,18 @@ button {
   @include lozenge-button;
 }
 
+input[type="text"],
+input[type="tel"] {
+border:none;
+  background:white;
+  padding:10px;
+}
+
+input[type="submit"] {
+  border:none;
+  padding:10px;
+}
+
 /* ==========================================================================
    Print styles
    ========================================================================== */

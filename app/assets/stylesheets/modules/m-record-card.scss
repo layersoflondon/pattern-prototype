@@ -20,6 +20,10 @@
   background: white;
 }
 
+.m-map-area .m-record-card a:hover {
+  background: #e6e5e5;
+}
+
 .m-record-card .image {
   width: 100%;
   padding-bottom: 40%;
@@ -35,6 +39,7 @@
   margin-top: 3px !important;
   margin-bottom: 6px;
   clear: left;
+  @include link-indicator;
 }
 
 .m-record-card p {

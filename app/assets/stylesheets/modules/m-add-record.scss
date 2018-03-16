@@ -36,3 +36,19 @@
 .m-add-record.is-edit-mode button.delete {
   display: inline-block;
 }
+
+
+.m-add-record .form-group--date .helper-text {
+  font-size:14px;
+  padding-top: 6px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.m-add-record .end-date-link {
+  font-size:14px;
+}
+
+.m-add-record .end-date {
+  display:none;
+}

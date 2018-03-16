@@ -20,6 +20,7 @@ class Map {
         this.setupCreateCollectionOverlay();
         this.setupYourAccountOverlay();
         this.setupRecordOverlay();
+        this.setupAddRecordOverlay();
 
     }
 
@@ -132,6 +133,11 @@ class Map {
         $('.m-record-card a').not('.m-record-card--collection a').click((event) => {
             $('.m-record h1').text($(event.currentTarget).find('h1').text());
             this.showOverlay('record');
+            event.preventDefault();
+        });
+
+        $('.m-record-card a').not('.m-record-card--collection a').hover((event) => {
+            bounceRandomMarker();
             event.preventDefault();
         });
 
@@ -309,25 +315,25 @@ class Map {
 
     setupYourAccountOverlay() {
 
-        $('.teamlink-owner-open').click((event) => {
-            this.showOverlay('your-account--team-owner-open');
+        $('.teamlink-owner').click((event) => {
+            this.showOverlay('your-account--team-owner');
             event.preventDefault();
         });
 
-        $('.teamlink-owner-managed').click((event) => {
+     /*   $('.teamlink-owner-managed').click((event) => {
             this.showOverlay('your-account--team-owner-managed');
             event.preventDefault();
-        });
+        });*/
 
-        $('.teamlink-member-open').click((event) => {
-            this.showOverlay('your-account--team-member-open');
+        $('.teamlink-member').click((event) => {
+            this.showOverlay('your-account--team-member');
             event.preventDefault();
         });
 
-        $('.teamlink-member-managed').click((event) => {
+    /*    $('.teamlink-member-managed').click((event) => {
             this.showOverlay('your-account--team-member-managed');
             event.preventDefault();
-        });
+        });*/
 
         $('.m-account-page input[type="submit"]').click((event) => {
             event.preventDefault();
@@ -377,6 +383,16 @@ class Map {
             this.showOverlay('add-record');
             event.preventDefault();
             event.stopPropagation();
+        });
+
+    }
+
+    setupAddRecordOverlay() {
+
+        $('.end-date-link a').click((event) => {
+            $('.end-date-link').hide();
+            $('.end-date').show();
+            event.preventDefault();
         });
 
     }
