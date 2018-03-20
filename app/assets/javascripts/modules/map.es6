@@ -10,6 +10,7 @@ class Map {
         this.setupToolIcons();
         this.setupTrayActions();
         this.setupLayerTools();
+        this.setupQuickstartSearch();
 
         // Overlays
         this.setupOverlay();
@@ -187,6 +188,10 @@ class Map {
             this.showTrayContent('default');
         });
 
+        $('.m-tray-title-area--search-results .refine').click((event) => {
+            this.showOverlay('refine');
+        });
+
         $('.creator-link a').click((event) => {
             this.showTrayContent('team');
             event.preventDefault();
@@ -218,6 +223,18 @@ class Map {
     showTrayContent(state) {
         $('.m-tray-area [class^="s-tray-area"]').removeClass('is-showing');
         $('.m-tray-area .s-tray-area--' + state).addClass('is-showing');
+    }
+
+    setupQuickstartSearch() {
+
+        $('.m-quickstart-search input[type="submit"]').click((event) => {
+            showPlaceMarkers();
+            var searchTerm = $('.m-quickstart-search input[type="text"]').val();
+            $('.m-tray-title-area--search-results h1').text('"' + searchTerm + '"');
+            this.showTrayContent('search-results');
+            event.preventDefault();
+        });
+
     }
 
 
@@ -320,20 +337,20 @@ class Map {
             event.preventDefault();
         });
 
-     /*   $('.teamlink-owner-managed').click((event) => {
-            this.showOverlay('your-account--team-owner-managed');
-            event.preventDefault();
-        });*/
+        /*   $('.teamlink-owner-managed').click((event) => {
+               this.showOverlay('your-account--team-owner-managed');
+               event.preventDefault();
+           });*/
 
         $('.teamlink-member').click((event) => {
             this.showOverlay('your-account--team-member');
             event.preventDefault();
         });
 
-    /*    $('.teamlink-member-managed').click((event) => {
-            this.showOverlay('your-account--team-member-managed');
-            event.preventDefault();
-        });*/
+        /*    $('.teamlink-member-managed').click((event) => {
+                this.showOverlay('your-account--team-member-managed');
+                event.preventDefault();
+            });*/
 
         $('.m-account-page input[type="submit"]').click((event) => {
             event.preventDefault();
@@ -410,6 +427,17 @@ class Map {
             this.showOverlay('add-record');
             $('.m-map-wrapper').removeClass('showing-place-picker');
             showAllMarkers();
+        }
+
+    }
+
+    mapDrag() {
+
+        $('.m-map-popover').hide();
+
+        if ($('.s-tray-area--introduction').hasClass('is-showing')) {
+            $('.s-tray-area--introduction').removeClass('is-showing');
+            $('.s-tray-area--default').addClass('is-showing');
         }
 
     }

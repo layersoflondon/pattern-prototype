@@ -1,5 +1,9 @@
 // Search overlay
 
+.m-search-overlay h1 {
+  float: left;
+}
+
 .m-search-overlay input {
   font-size: 30px;
   border: none;
@@ -7,22 +11,31 @@
 }
 
 .m-search-overlay input[type="text"] {
-  width: calc(100% - 170px);
+  width: 100%;
   margin-right: -5px;
 }
 
 .m-search-overlay input[type="submit"] {
   width: 170px;
+  float: right;
+  margin-bottom: 80px;
 }
 
 .m-search-overlay .form-group--primary-field {
   margin-bottom: 50px;
 }
 
+.m-search-overlay .form-group--single-checkbox {
+  text-align: right;
+  margin-bottom: 10px;
+  float: right;
+  margin-top: 30px;
+}
+
 .m-search-overlay .form-group--checklist {
-  width: 50%;
+  width: 33.333333%;
   float: left;
-  margin-bottom: 130px;
+  margin-bottom: 20px;
 }
 
 .m-search-overlay .form-group--checklist label {
@@ -41,12 +54,16 @@
 
 .m-search-overlay .date-range-link {
   padding: 30px;
-  clear:both;
-  margin-top:30px;
+  clear: both;
+  margin-top: 30px;
   background: #4c4c4c;
 }
 
+.m-search-overlay .date-range-link h1 {
+  float: none;
+}
+
 .m-search-overlay .date-range-link a {
-  color:white;
+  color: white;
   @include top-and-tail;
 }

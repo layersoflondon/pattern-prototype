@@ -205,6 +205,11 @@
                             prototypeFunctionality.mapClicks(event.pixel.x, event.pixel.y);
                         });
 
+                        map.addListener('dragend', function (event) {
+                            prototypeFunctionality.mapDrag()
+                        });
+
+
                         hidePlaceMarkers();
                     }
 
@@ -282,6 +287,7 @@
             <%= render "shared/s-overlay--your-account--records-collections" %>
             <%= render "shared/s-overlay--your-account--for-teachers" %>
             <%= render "shared/s-overlay--record" %>
+            <%= render "shared/s-overlay--refine" %>
         </div>
 
         <div class="m-place-picker">
