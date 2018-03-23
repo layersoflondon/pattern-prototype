@@ -6,9 +6,8 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <!--<link href="https://fonts.googleapis.com/css?family=Work+Sans:500,700" rel="stylesheet">-->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
-
+    <!--<link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Enriqueta:400,700|IBM+Plex+Serif:400,500,600|Nunito:400,600,700|Roboto+Slab:400,700|Zilla+Slab:400,600,700" rel="stylesheet">-->
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,500,600|Nunito:400,600,700|Roboto+Slab:400,700" rel="stylesheet">
 
 </head>
 
@@ -280,14 +279,11 @@
             <%= render "shared/s-overlay--add-record" %>
             <%= render "shared/s-overlay--your-account--details" %>
             <%= render "shared/s-overlay--your-account--teams" %>
-            <%= render "shared/s-overlay--your-account--team-owner-open" %>
-            <%= render "shared/s-overlay--your-account--team-owner-managed" %>
-            <%= render "shared/s-overlay--your-account--team-member-open" %>
-            <%= render "shared/s-overlay--your-account--team-member-managed" %>
+            <%= render "shared/s-overlay--your-account--team-owner" %>
+            <%= render "shared/s-overlay--your-account--team-member" %>
             <%= render "shared/s-overlay--your-account--records-collections" %>
             <%= render "shared/s-overlay--your-account--for-teachers" %>
             <%= render "shared/s-overlay--record" %>
-            <%= render "shared/s-overlay--refine" %>
         </div>
 
         <div class="m-place-picker">

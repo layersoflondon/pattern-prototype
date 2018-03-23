@@ -3,7 +3,8 @@
 .m-sidebar {
   width:80px;
   height:100%;
-  background:#333;
+  background:white;
+  border-right:2px solid $interface-border;
   position:absolute;
   left:0;
   top:0;
@@ -16,4 +17,5 @@
 .m-sidebar:hover {
   width: 200px;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-right:0;
 }

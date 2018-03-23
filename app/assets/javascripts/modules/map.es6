@@ -256,7 +256,15 @@ class Map {
             this.hideOverlay();
         });
 
-        $('.m-overlay .wrap').click((event) => {
+
+        $('.m-overlay .close').click((event) => {
+            this.hideOverlay();
+            event.stopPropagation();
+        });
+
+        $('.m-overlay > div > div').not('.close').click((event) => {
+            // This will need to be changed for live!
+            console.log('ergerg');
             event.stopPropagation();
         });
 

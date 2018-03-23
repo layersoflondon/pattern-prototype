@@ -1,66 +1,62 @@
 <div class="s-overlay--add-collection">
 
+    <div class="close">
+        <button class="close">Close</button>
+    </div>
+
     <div class="m-add-collection">
 
-        <div class="close">
-            <button class="close">Close</button>
-        </div>
+        <h1>Create collection</h1>
 
-        <div class="wrap">
+        <form class="form--chunky form--over-white">
 
-            <h1>Create collection</h1>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" placeholder=""/>
 
-            <form class="form--chunky">
+            </div>
 
-                <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" placeholder=""/>
+            <div class="form-group">
+                <label>Description</label>
+                <textarea rows="10" placeholder=""></textarea>
+            </div>
 
-                </div>
+            <div class="form-group form-group--checkboxes-rows">
 
-                <div class="form-group">
-                    <label>Description</label>
-                    <textarea rows="10" placeholder=""></textarea>
-                </div>
+                <span class="label">Who can see?</span>
+                <label>
+                    <input type="checkbox"/>
+                    <span>Keep this collection private<br/> Only you will see this collection (NB: the records within will still be visible)</span>
+                </label>
 
-                <div class="form-group form-group--checkboxes-rows">
+            </div>
 
-                    <span class="label">Who can see?</span>
-                    <label>
-                        <input type="checkbox"/>
-                        <span>Keep this collection private<br/> Only you will see this collection (NB: the records within will still be visible)</span>
-                    </label>
+            <div class="form-group form-group--checkboxes-rows">
 
-                </div>
+                <span class="label">Who can edit?</span>
+                <label>
+                    <input type="radio" checked="checked"/>
+                    <span>Just you</span>
+                </label>
+                <label>
+                    <input type="radio"/>
+                    <span>Members of</span>
+                    <select class="in-context-input" placeholder="Team">
+                        <option>Team One</option>
+                        <option>Team Two</option>
+                        <option>Team Three</option>
+                    </select>
+                </label>
+                <label>
+                    <input type="radio"/>
+                    <span>Anyone</span>
+                </label>
 
-                <div class="form-group form-group--checkboxes-rows">
+            </div>
 
-                    <span class="label">Who can edit?</span>
-                    <label>
-                        <input type="radio" checked="checked"/>
-                        <span>Just you</span>
-                    </label>
-                    <label>
-                        <input type="radio"/>
-                        <span>Members of</span>
-                        <select class="in-context-input" placeholder="Team">
-                            <option>Team One</option>
-                            <option>Team Two</option>
-                            <option>Team Three</option>
-                        </select>
-                    </label>
-                    <label>
-                        <input type="radio"/>
-                        <span>Anyone</span>
-                    </label>
+            <input type="submit" value="Save"/>
 
-                </div>
-
-                <input type="submit" value="Save"/>
-
-            </form>
-
-        </div>
+        </form>
 
     </div>
 
