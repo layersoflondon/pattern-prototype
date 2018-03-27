@@ -4,6 +4,9 @@
   background: transparent;
   border: 0;
   color: $bright-accent;
+  color: #19c383;
+  color:#7f0181;
+  color:#ffcf7c;
   padding: 15px 10px;
   position: relative;
 }
@@ -66,6 +69,7 @@
   display: none;
 }
 
+/*
 $base-color: #910ade;
 
 .m-tool-button:nth-child(1) button {
@@ -87,3 +91,4 @@ $base-color: #910ade;
 .m-tool-button:nth-child(5) button {
   color: adjust-hue($base-color, 25%);
 }
+*/

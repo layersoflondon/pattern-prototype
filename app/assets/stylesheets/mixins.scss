@@ -5,8 +5,9 @@
 // Type
 
 @mixin font-display {
-  font-family: 'Roboto Slab', serif;
-  //font-family: 'IBM Plex Serif', serif;
+  //font-family: 'Roboto Slab', serif;
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: 400;
 }
 
 // Elements
@@ -38,6 +39,7 @@ $element-border-radius-small:3px;
   overflow:hidden;
 
   .link-indicator {
+    //display:none;
     background: $second-accent;
     position:absolute;
     bottom:0;
