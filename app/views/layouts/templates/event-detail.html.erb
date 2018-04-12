@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Layers of London | Event detail</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag 'marketing', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+</head>
+
+<%= render "global/header" %>
+
+<body>
+    <div class="m-site-wrapper">
+
+        <div class="m-site-header">
+            <div class="m-logo">
+                <h1>Layers of London</h1>
+                <!--<img src="logo.svg" />-->
+            </div>
+            <div class="m-navigation">
+                <ul class="main-navigation">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Map</a></li>
+                    <li><a href="#">Help Centre</a></li>
+                    <li><a href="#">Map making</a></li>
+                    <li class="is-current"><a href="#">Schools, Groups, and Clubs</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                <ul class="user-actions">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="m-page-header">
+            <a href="#">Back to events</a>
+            <h1>Events</h1>
+        </div>
+
+        <div class="m-sidebar m-sidebar--right">
+            <div class="m-event-meta">
+                <div>
+                    <h3>Date</h3>
+                    <span>Thursday 15th November 2018</span>
+                </div>
+                <div>
+                    <h3>Location</h3>
+                    <span>Ealing Community Center</span>
+                </div>
+
+                <div>
+                    <h3>Booking</h3>
+                    <span>Nulla imperdiet porta leo vitae fermentum. Morbi imperdiet venenatis <a href="mailto:amy@layersoflondon.com">amy@layersoflondon.com</a>.</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="m-content">
+
+            <h1 class="title">Event: Layers for Schools</h1>
+
+            <div class="m-article">
+
+                <p>A small paragraph to show <em>emphasis</em> and <strong>important</strong> bits.</p>
+
+                <p> Aenean non condimentum libero,
+                    convallis aliquam est. Suspendisse rhoncus consectetur posuere. Sed dapibus luctus sapien eget
+                    varius. Nulla sed felis id risus iaculis mollis. Mauris pulvinar nisl vitae leo euismod, sit amet
+                    viverra massa vehicula.</p>
+
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit
+                    <a href="#">amet quam egestas semper</a>. Aenean ultricies mi vitae est. Mauris placerat eleifend
+                    leo.</p>
+
+                <div class="image image--left"></div>
+
+                <p>Curabitur at risus sed tellus tristique bibendum nec sed urna. Pellentesque habitant morbi tristique
+                    senectus et netus et malesuada fames ac turpis egestas. Praesent malesuada aliquet quam quis
+                    efficitur. Curabitur et quam sollicitudin neque varius laoreet. Aenean non condimentum libero,
+                    convallis aliquam est. Suspendisse rhoncus consectetur posuere. Sed dapibus luctus sapien eget
+                    varius. Nulla sed felis id risus iaculis mollis. Mauris pulvinar nisl vitae leo euismod, sit amet
+                    viverra massa vehicula.</p>
+
+                <h2>How to choose the right cake</h2>
+
+                <p>Curabitur et quam sollicitudin neque varius quam quis efficitur laoreet. Aenean non condimentum
+                    libero, convallis aliquam est. Suspendisse rhoncus consectetur posuere. Don't forget that:</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="m-layermaker-banner">
+            <div class="title-wrapper">
+                <h2 class="subtitle">Volunteer for Layers of London</h2>
+                <h3 class="title">Become a layer maker</h3>
+            </div>
+            <p>Praesent vel lectus non est semper condimentum. Sed dictum, tortor nec sagittis ultrices, risus nulla
+                pretium arcu.</p>
+            <a class="button">Let's do it</a>
+        </div>
+
+        <div class="m-site-footer">
+            <div class="copyright">2018 &copy; Layers of London</div>
+            <div class="footer-navigation">
+                <ul class="user-actions">
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Accessibility</a></li>
+                </ul>
+            </div>
+            <div class="partners">
+                <h3>Partners & Supporters</h3>
+                <ul>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                    <li><a href="#">
+                        <div class="image"></div>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<%= render "global/footer" %>
+</html>

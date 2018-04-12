@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Layers of London | Home</title>
+    <title>Layers of London | Section landing</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'marketing', media: 'all' %>
@@ -24,7 +24,7 @@
                     <li><a href="#">Map</a></li>
                     <li><a href="#">Help Centre</a></li>
                     <li><a href="#">Map making</a></li>
-                    <li><a href="#">Schools, Groups, and Clubs</a></li>
+                    <li class="is-current"><a href="#">Schools, Groups, and Clubs</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
@@ -36,25 +36,20 @@
             </div>
         </div>
 
-        <div class="m-hero m-hero--large">
-            <div class="image"></div>
-            <div class="text-content">
-                <h1>Documenting the rich layers of heritage and stories across London</h1>
-                <div class="search">
-                    <input type="text" placeholder="Search the maps"/>
-                    <input type="submit" value="Go"/>
-                </div>
-            </div>
+        <div class="m-page-header">
+            <h1>Schools, Groups, and Clubs</h1>
+            <p>Nunc vel accumsan enim. Phasellus ullamcorper metus elit, et porta est suscipit vitae. Phasellus
+                porttitor semper vehicula. Integer a odio pretium, suscipit enim bibendum, aliquet eros. Sed iaculis
+                semper dui.</p>
         </div>
 
-        <div class="m-highlighted-content">
-            <h2>Highlights</h2>
-            <div class="highlight">
+        <div class="m-section-landing-subpages">
+            <div class="subpage">
                 <a href="#">
                     <div class="image"></div>
                     <div class="text-content">
-                        <div class="indicator">Collection</div>
-                        <h3>Greyhurst Mill Memories</h3>
+                        <div class="indicator">Using Layers of London in Schools</div>
+                        <h3>A guide to using Layers in your school</h3>
                         <div class="description">
                             <p>Aliquam nec consectetur libero. Nunc euismod, lacus vel ultrices sollicitudin, tortor
                                 libero
@@ -65,12 +60,12 @@
                     </div>
                 </a>
             </div>
-            <div class="highlight">
+            <div class="subpage">
                 <a href="#">
                     <div class="image"></div>
                     <div class="text-content">
-                        <div class="indicator">Collection</div>
-                        <h3>Greyhurst Mill Memories</h3>
+                        <div class="indicator">Groups and Clubs</div>
+                        <h3>How to get your group involved</h3>
                         <div class="description">
                             <p>Aliquam nec consectetur libero. Nunc euismod, lacus vel ultrices sollicitudin, tortor
                                 libero
@@ -81,44 +76,12 @@
                     </div>
                 </a>
             </div>
-            <div class="highlight">
+            <div class="subpage">
                 <a href="#">
                     <div class="image"></div>
                     <div class="text-content">
-                        <div class="indicator">Collection</div>
-                        <h3>Greyhurst Mill Memories</h3>
-                        <div class="description">
-                            <p>Aliquam nec consectetur libero. Nunc euismod, lacus vel ultrices sollicitudin, tortor
-                                libero
-                                sagittis mi, pellentesque dignissim tellus nisl ut tortor. Nulla eu enim risus. Aenean
-                                porta
-                                ligula nisl, eu hendrerit.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="highlight">
-                <a href="#">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <div class="indicator">Collection</div>
-                        <h3>Greyhurst Mill Memories</h3>
-                        <div class="description">
-                            <p>Aliquam nec consectetur libero. Nunc euismod, lacus vel ultrices sollicitudin, tortor
-                                libero
-                                sagittis mi, pellentesque dignissim tellus nisl ut tortor. Nulla eu enim risus. Aenean
-                                porta
-                                ligula nisl, eu hendrerit.</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="highlight">
-                <a href="#">
-                    <div class="image"></div>
-                    <div class="text-content">
-                        <div class="indicator">Collection</div>
-                        <h3>Greyhurst Mill Memories</h3>
+                        <div class="indicator">Teaching Resources</div>
+                        <h3>Get your class involved</h3>
                         <div class="description">
                             <p>Aliquam nec consectetur libero. Nunc euismod, lacus vel ultrices sollicitudin, tortor
                                 libero
@@ -131,28 +94,15 @@
             </div>
         </div>
 
-        <div class="m-home-cta-block">
-            <div class="image"></div>
-            <div class="text-content">
-                <h3>Tell your story</h3>
-                <div class="description">
-                    <p>Tortor libero sagittis mi, pellentesque dignissim tellus nisl ut tortor. Nulla eu enim risus.
-                        Aenean porta ligula nisl, eu hendrerit.</p>
-                </div>
-                <a class="button" href="#">Get started</a>
-            </div>
-        </div>
 
-        <div class="m-home-cta-block m-home-cta-block--flipped">
-            <div class="image"></div>
-            <div class="text-content">
-                <h3>Fancy being a Layers of London map maker?</h3>
-                <div class="description">
-                    <p>We’ve a lot of hard work to do to get our historic maps look more accurate. You can help out by
-                        fixing some old maps.</p>
-                </div>
-                <a class="button" href="#">Let's do it</a>
+        <div class="m-layermaker-banner">
+            <div class="title-wrapper">
+                <h2 class="subtitle">Volunteer for Layers of London</h2>
+                <h3 class="title">Become a layer maker</h3>
             </div>
+            <p>Praesent vel lectus non est semper condimentum. Sed dictum, tortor nec sagittis ultrices, risus nulla
+                pretium arcu.</p>
+            <a class="button">Let's do it</a>
         </div>
 
         <div class="m-site-footer">
