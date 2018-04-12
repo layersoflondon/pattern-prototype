@@ -34,6 +34,10 @@ class Map {
             $(this).css('background-image', 'url(/example/' + (Math.floor(Math.random() * 16) + 1) + '.jpg');
         });
 
+        $('.random-image-large').each(function () {
+            $(this).css('background-image', 'url(/example/' + (Math.floor(Math.random() * 16) + 1) + '-large.jpg');
+        });
+
     }
 
     setupRecordCards() {
@@ -264,7 +268,6 @@ class Map {
 
         $('.m-overlay > div > div').not('.close').click((event) => {
             // This will need to be changed for live!
-            console.log('ergerg');
             event.stopPropagation();
         });
 
