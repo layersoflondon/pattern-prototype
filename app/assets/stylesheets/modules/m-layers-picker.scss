@@ -74,7 +74,6 @@
 
 .m-layers-picker .layer button {
   background: $link-color;
-  color: white;
   border: 0;
   border-radius: 100px;
 }
@@ -103,5 +102,4 @@
 
 .m-layers-picker .layer button.is-selected {
   background: #eee;
-  color: $link-color;
 }

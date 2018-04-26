@@ -1,12 +1,7 @@
 // Add collection
 
 .m-add-collection {
-/*  background: white;
-  color: #333;
-  padding: 40px;
-  max-width: 900px;
-  margin-top: 50px;*/
-  @include overlay-wrap-white;
+  @include overlay-wrap-blue;
 }
 
 .m-add-collection h1 {

@@ -2,7 +2,7 @@
 
 .m-add-record {
   border-radius:$element-border-radius-small;
-  @include overlay-wrap-white;
+  @include overlay-wrap-blue;
   max-width: 900px;
   margin-top: 50px;
 }

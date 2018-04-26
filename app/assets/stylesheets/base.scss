@@ -8,7 +8,7 @@ input,
 select,
 textarea {
   color: #222;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Muli', sans-serif;
 }
 
 h1 {
@@ -157,7 +157,7 @@ input[type="submit"] {
   border-radius: $default-border-radius;
   background: $main-accent;
   @include transition(all .2s);
-  color: white;
+  //color: white;
   &:hover {
     background: darken($main-accent, 10%);
   }
