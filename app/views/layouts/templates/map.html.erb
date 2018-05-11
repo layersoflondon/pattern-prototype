@@ -59,32 +59,33 @@
         <div class="m-map-area">
 
             <div class="m-layer-tools is-closed">
-                <button>Layer tools</button>
+
                 <div class="panel">
-                    <h1>Layer tools</h1>
-                    <button><span>Close</span></button>
-                    <div class="layer">
-                        <span class="dragger"></span>
-                        <span class="name">Roque map</span>
-                        <div class="slider">
-                            <span class="handle"></span>
+                    <button class="open">Layer tools</button>
+                    <div class="layers">
+                        <div class="layer">
+                            <span class="dragger"></span>
+                            <span class="name">Roque map</span>
+                            <div class="slider">
+                                <span class="handle"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="layer">
-                        <span class="dragger"></span>
-                        <span class="name">Morgan map</span>
-                        <div class="slider">
-                            <span class="handle"></span>
+                        <div class="layer">
+                            <span class="dragger"></span>
+                            <span class="name">Morgan map</span>
+                            <div class="slider">
+                                <span class="handle"></span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="layer">
-                        <span class="dragger"></span>
-                        <span class="name">RAF Photos</span>
-                        <div class="slider">
-                            <span class="handle"></span>
+                        <div class="layer">
+                            <span class="dragger"></span>
+                            <span class="name">RAF Photos</span>
+                            <div class="slider">
+                                <span class="handle"></span>
+                            </div>
                         </div>
+                        <a href="#">Choose new layers</a>
                     </div>
-                    <a href="#">Choose new layers</a>
                 </div>
 
             </div>
@@ -144,6 +145,14 @@
                                     ]
                                 },
                                 {
+                                    "elementType": "labels",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                },
+                                {
                                     "elementType": "labels.text.fill",
                                     "stylers": [
                                         {
@@ -160,28 +169,11 @@
                                     ]
                                 },
                                 {
-                                    "featureType": "administrative",
-                                    "elementType": "geometry",
-                                    "stylers": [
-                                        {
-                                            "visibility": "off"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "featureType": "administrative.land_parcel",
-                                    "stylers": [
-                                        {
-                                            "visibility": "off"
-                                        }
-                                    ]
-                                },
-                                {
                                     "featureType": "administrative.locality",
                                     "elementType": "labels.text.fill",
                                     "stylers": [
                                         {
-                                            "color": "#ffffff"
+                                            "color": "#d59563"
                                         }
                                     ]
                                 },
@@ -195,6 +187,7 @@
                                 },
                                 {
                                     "featureType": "poi",
+                                    "elementType": "labels.text",
                                     "stylers": [
                                         {
                                             "visibility": "off"
@@ -207,6 +200,14 @@
                                     "stylers": [
                                         {
                                             "color": "#d59563"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "poi.business",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
                                         }
                                     ]
                                 },
@@ -248,15 +249,6 @@
                                 },
                                 {
                                     "featureType": "road",
-                                    "elementType": "labels",
-                                    "stylers": [
-                                        {
-                                            "visibility": "off"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "featureType": "road",
                                     "elementType": "labels.icon",
                                     "stylers": [
                                         {
@@ -284,10 +276,22 @@
                                 },
                                 {
                                     "featureType": "road.highway",
+                                    "elementType": "geometry.fill",
+                                    "stylers": [
+                                        {
+                                            "visibility": "off"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "featureType": "road.highway",
                                     "elementType": "geometry.stroke",
                                     "stylers": [
                                         {
                                             "color": "#1f2835"
+                                        },
+                                        {
+                                            "visibility": "off"
                                         }
                                     ]
                                 },
@@ -332,15 +336,6 @@
                                     "stylers": [
                                         {
                                             "color": "#17263c"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "featureType": "water",
-                                    "elementType": "labels.text",
-                                    "stylers": [
-                                        {
-                                            "visibility": "off"
                                         }
                                     ]
                                 },
@@ -493,7 +488,7 @@
             <div class="m-map-layer-controls"></div>
         </div>
 
-        <div class="m-overlay">
+        <div class="m-overlay is-showing">
             <%= render "shared/s-overlay--search" %>
             <%= render "shared/s-overlay--date-range" %>
             <%= render "shared/s-overlay--layers" %>

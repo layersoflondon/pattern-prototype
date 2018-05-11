@@ -210,15 +210,15 @@ class Map {
             event.preventDefault();
         });
 
-        $('.m-layer-tools .panel > button').click((event) => {
+/*        $('.m-layer-tools .panel .close').click((event) => {
             //Close
             $('.m-layer-tools').addClass('is-closed');
             event.preventDefault();
-        });
+        });*/
 
-        $('.m-layer-tools > button').click((event) => {
+        $('.m-layer-tools .panel .open').click((event) => {
             //Open
-            $('.m-layer-tools').removeClass('is-closed');
+            $('.m-layer-tools').toggleClass('is-closed');
             event.preventDefault();
         });
 

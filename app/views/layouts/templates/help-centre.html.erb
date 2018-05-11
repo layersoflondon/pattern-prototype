@@ -1,52 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Layers of London | Help Centre</title>
+
+    <title>Layers of London | Content page</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag 'marketing', media: 'all' %>
-    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'marketing' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600,700|Muli:400,600,700" rel="stylesheet">
+
 </head>
 
 <%= render "global/header" %>
 
-<body>
+<body class="t-help-centre">
     <div class="m-site-wrapper">
 
         <div class="m-site-header">
             <div class="m-logo">
-                <h1>Layers of London</h1>
-                <!--<img src="logo.svg" />-->
+                <a href="/">
+                    <h1>Layers of London</h1>
+                    <%= image_tag("logo.svg") %>
+                </a>
             </div>
             <div class="m-navigation">
+                <ul class="user-actions">
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign up</a></li>
+                </ul>
                 <ul class="main-navigation">
-                    <li><a href="#">Home</a></li>
+                    <!--<li><a href="#">Home</a></li>-->
                     <li><a href="#">Map</a></li>
-                    <li><a href="#">Help Centre</a></li>
+                    <li class="is-current"><a href="#">Help Centre</a></li>
                     <li><a href="#">Map making</a></li>
                     <li><a href="#">Schools, Groups, and Clubs</a></li>
                     <li><a href="#">Events</a></li>
                     <li><a href="#">About</a></li>
                     <li><a href="#">Blog</a></li>
                 </ul>
-                <ul class="user-actions">
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Sign up</a></li>
-                </ul>
             </div>
         </div>
 
-        <div class="m-page-header">
-            <h1>Help Centre</h1>
+        <div class="m-page-header m-page-header--nano">
+            <div class="image random-image-large"></div>
+            <div class="text-content">
+                <h1 class="viewable">Help Centre</h1>
+            </div>
         </div>
 
         <div class="m-help-header">
+
             <div class="video">
-                <h2 class="title">Watch our introduction to using Layers of London</h2>
-                <div class="video-wrapper">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0OrSVn8k8Mc?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div>
+                    <h2 class="title">Introducing Layers of London</h2>
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/1iMUDfXjXc8?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
+
             <div class="top-faq">
                 <h2 class="title">Top frequently asked questions</h2>
                 <ul>
@@ -61,15 +74,15 @@
 
         </div>
 
-        <div class="m-layermaker-banner">
-            <div class="title-wrapper">
-                <h2 class="subtitle">Volunteer for Layers of London</h2>
-                <h3 class="title">Become a layer maker</h3>
-            </div>
-            <p>Praesent vel lectus non est semper condimentum. Sed dictum, tortor nec sagittis ultrices, risus nulla
-                pretium arcu.</p>
-            <a class="button">Let's do it</a>
-        </div>
+        <!--        <div class="m-layermaker-banner">
+                    <div class="title-wrapper">
+                        <h2 class="subtitle">Volunteer for Layers of London</h2>
+                        <h3 class="title">Become a layer maker</h3>
+                    </div>
+                    <p>Praesent vel lectus non est semper condimentum. Sed dictum, tortor nec sagittis ultrices, risus nulla
+                        pretium arcu.</p>
+                    <a class="button">Let's do it</a>
+                </div>-->
 
 
         <div class="m-guides">
@@ -80,78 +93,91 @@
                 <a href="#">
                     <div class="image"></div>
                     <h3>The Map</h3>
+                    <p class="description">Getting to grips with the map and tools</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Records</h3>
+                    <p class="description">Creating records: add your stories, memories, data…</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Collections</h3>
+                    <p class="description">Organising you records into useful groups</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Searching & dates</h3>
+                    <p class="description">Find specific content and places, in chosen periods</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Layers</h3>
+                    <p class="description">Use old maps, aerial photography etc. to explore history</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Teams</h3>
+                    <p class="description">Share and edit your content collaboratively</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Your account</h3>
+                    <p class="description">Edit your profile and change user settings</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Schools</h3>
+                    <p class="description">Features that make things simple for school users</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>The Map</h3>
+                    <p class="description">Getting to grips with the map and tools</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Records</h3>
+                    <p class="description">Creating records: add your stories, memories, data…</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Collections</h3>
+                    <p class="description">Organising you records into useful groups</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Searching & dates</h3>
+                    <p class="description">Use old maps, aerial photography etc. to explore history</p>
                 </a>
             </div>
             <div class="guide">
                 <a href="#">
                     <div class="image"></div>
                     <h3>Layers</h3>
+                    <p class="description">Use old maps, aerial photography etc. to explore history</p>
                 </a>
             </div>
 
@@ -159,7 +185,14 @@
 
 
         <div class="m-site-footer">
-            <div class="copyright">2018 &copy; Layers of London</div>
+            <div class="partners">
+                <h3>Partners & Supporters</h3>
+                <ul>
+                    <li><a href="#"><img src="/assets/logo-sas.png" alt="Logo sas"></a></li>
+                    <li><a href="#"><img src="/assets/logo-lottery.png" alt="Logo lottery"></a></li>
+                    <li><a href="#"><img src="/assets/logo-ihr.png" alt="Logo ihr"></a></li>
+                </ul>
+            </div>
             <div class="footer-navigation">
                 <ul class="user-actions">
                     <li><a href="#">Terms & Conditions</a></li>
@@ -167,29 +200,7 @@
                     <li><a href="#">Accessibility</a></li>
                 </ul>
             </div>
-            <div class="partners">
-                <h3>Partners & Supporters</h3>
-                <ul>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                    <li><a href="#">
-                        <div class="image"></div>
-                    </a></li>
-                </ul>
-            </div>
+            <div class="copyright">2018 &copy; Layers of London</div>
         </div>
 
     </div>

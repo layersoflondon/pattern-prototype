@@ -5,9 +5,14 @@
   max-width: 1000px;
 }
 
+.m-layers-picker h1 {
+  @include overlay-title;
+}
+
 .m-layers-picker .search {
   float: right;
   margin-bottom: 30px;
+  display:none;
 }
 
 .m-layers-picker .layers {
@@ -20,15 +25,17 @@
   margin-right: -4px;
   width: 33.333333%;
   margin-bottom: 30px;
-  padding-right: 60px;
+  padding-right: 30px;
+  vertical-align: top;
 }
 
 .m-layers-picker .layer .image {
-  width: 100%;
-  padding-bottom: 40%;
+  width: auto;
+  padding-bottom: 60%;
   background: #555;
   background-size: cover;
   background-position: center;
+  margin:-20px -20px 0 -20px;
 }
 
 .m-layers-picker .layer:nth-child(1) .image {
@@ -57,6 +64,7 @@
 
 .m-layers-picker .layer h2 {
   margin-bottom: 0;
+  @include font-display;
 }
 
 .m-layers-picker .wrap > button {
@@ -64,12 +72,14 @@
 }
 
 .m-layers-picker .layer a {
-  color: white;
+  color: $black;
   display: block;
+  padding:20px;
+  background:white;
 }
 
 .m-layers-picker .layer a:hover {
-  color: white;
+  //color: white;
 }
 
 .m-layers-picker .layer button {
@@ -102,4 +112,8 @@
 
 .m-layers-picker .layer button.is-selected {
   background: #eee;
+}
+
+.m-layers-picker .layer p {
+  font-size:12px;
 }

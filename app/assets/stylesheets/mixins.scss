@@ -1,11 +1,10 @@
 /* Mixins */
 
-@mixin polygon-background ($color, $position, $flip:false) {
+@mixin polygon-background($color, $position, $flip:false) {
   position: relative;
   z-index: 0;
   &:before {
     content: "";
-
     position: absolute;
     top: 0;
     left: 0;
@@ -16,7 +15,6 @@
     z-index: -1;
 
     @if $color==black {
-
       background-color: $black;
       @if $flip==true {
         border-image-source: asset-url('slash-edge-black-flipped.svg');
@@ -25,7 +23,6 @@
       }
 
     } @else if $color==yellow {
-
       background-color: $yellow;
       @if $flip==true {
         border-image-source: asset-url('slash-edge-yellow-flipped.svg');
@@ -33,12 +30,19 @@
         border-image-source: asset-url('slash-edge-yellow.svg');
       }
 
+    } @else if $color==red {
+      background-color: $red;
+      @if $flip==true {
+        border-image-source: asset-url('slash-edge-red-flipped.svg');
+      } @else {
+        border-image-source: asset-url('slash-edge-red.svg');
+      }
+
     }
 
     border-image-slice: 20;
     border-image-repeat: stretch;
-
-    $border-width:5px;
+    $border-width: 5px;
 
     @if $position==top {
       border-image-width: $border-width 0 0 0;
@@ -56,59 +60,10 @@
 
   }
 }
-/*
-@mixin polygon-background-top {
-  @include polygon-background;
-  &:before {
-    //border-width: 1px 0 0 0;
-
-
-  }
-}
-
-@mixin polygon-background-right {
-  @include polygon-background;
-  &:before {
-    border-image-source: asset-url('slash-edge-yellow.svg');
-
-  }
-}
-
-@mixin polygon-background-top-flipped {
-  @include polygon-background-top;
-  &:before {
-    border-image-source: asset-url('slash-edge-yellow-flipped.svg');
-  }
-}
-
-@mixin polygon-background-right-flipped {
-  @include polygon-background-right;
-  &:before {
-    border-image-source: asset-url('slash-edge-yellow-flipped.svg');
-  }
-}
-
-
-@mixin polygon-background-bottom-flipped {
-  @include polygon-background-right;
-  &:before {
-    border-image-source: asset-url('slash-edge-yellow-flipped.svg');
-  }
-}
-
-
-@mixin polygon-background-left-flipped {
-  @include polygon-background-right;
-  &:before {
-    border-image-source: asset-url('slash-edge-yellow-flipped.svg');
-  }
-}*/
-
 
 // Type
 
 @mixin font-display {
-  //font-family: 'Roboto Slab', serif;
   font-family: 'Zilla Slab', serif;
   font-weight: 400;
 }
@@ -133,8 +88,15 @@ $element-border-radius-small: 3px;
 
 @mixin overlay-wrap-blue {
   @include overlay-wrap;
-  color: white;
-  background: $other-blue;
+  color: $red;
+  background: $orange;
+  padding: 40px;
+}
+
+@mixin overlay-wrap-gray {
+  @include overlay-wrap;
+  color: $green;
+  background: $gray;
   padding: 40px;
 }
 
@@ -143,43 +105,119 @@ $element-border-radius-small: 3px;
   color: white;
 }
 
+.m-map-area .m-record-card .wrapper {
+  background: white;
+}
+
+.m-map-area .m-record-card .wrapper:hover {
+  background: #e6e5e5;
+}
+
+@mixin record-card {
+
+  .wrapper {
+    display: block;
+    transition: all .4s;
+    position: relative;
+    @include link-animation;
+    height: 280px;
+    color: white;
+  }
+
+  .image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  .image:before {
+    height: 100%;
+    width: 101%;
+    content: "";
+    opacity: 0;
+    position: absolute;
+    background: #000;
+    @include transition(all .4s);
+  }
+
+  .wrapper:hover .image:before {
+    opacity: 0.4;
+  }
+
+  .text-content {
+    @include top-and-tail;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    width: 90%;
+    @include transition(all .4s);
+    @include transform(translate3d(0, 100%, 0));
+  }
+
+  .wrapper:hover .text-content {
+    @include transform(translate3d(0, 0, 0));
+  }
+
+  h1 {
+    @include transition(all .4s);
+    @include font-display;
+    @include polygon-background(black, right);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0;
+    padding: 7px 12px;
+    position: absolute;
+    max-width: 90%;
+    @include transform(translate3d(0, -100%, 0));
+  }
+
+  .text-content p {
+    margin: 0 0 10px 0;
+    max-height: 50%;
+    width: 100%;
+    padding: 7px 12px;
+    @include transition(all .4s);
+    background: transparentize($black, 0.1);
+  }
+
+  .collection-indicator {
+    display: block;
+    float: left;
+    @include font-display;
+    transition: all .2s;
+    color: black;
+    padding: 7px 12px;
+    @include polygon-background(yellow, bottom, false);
+  }
+
+}
+
 @mixin link-animation {
   overflow: hidden;
 
   .link-indicator {
-    //display:none;
-    //background: $second-accent;
     position: absolute;
     top: 18px;
     right: 18px;
-    //width: 25px;
-    //height: 25px;
     @include transition(all .4s);
-    //@include transform(translate3d(25px,25px,0));
+    opacity: 0;
+    @include transform(translate3d(-25px, 0, 0));
   }
 
   &:hover .link-indicator {
-    //@include transform(translate3d(0,0,0));
+    opacity: 1;
+    @include transform(translate3d(0, 0, 0));
   }
 
   .link-indicator:after {
     content: "\f0da";
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
-    //font-size: 0.9em;
     font-size: 1.4em;
-    /*    position:absolute;
-        top: 10px;
-        right: 10px;*/
-    color: $main-accent;
-    opacity: 0;
-    @include transition(all .4s);
-    //@include transform(translate3d(-25px,-25px,0));
+    color: $yellow;
     z-index: 1;
-  }
-
-  &:hover .link-indicator:after {
-    opacity: 1;
   }
 }
 
@@ -187,14 +225,28 @@ $element-border-radius-small: 3px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
 }
 
+@mixin overlay-title {
+  @include font-display;
+  @include polygon-background(yellow, top, true);
+  padding: 20px 30px;
+  font-size: 36px;
+  margin-left: -30px;
+  color: $black;
+  display:inline-block;
+}
+
 // Buttons
 
 @mixin big-square-button {
-  background: $link-color;
-  //color:white;
-  border-radius: $element-border-radius;
+  //background: $orange;
+  //border-radius: $element-border-radius;
   border: 0;
   padding: 11px 25px;
+  border-radius: 100px;
+  border: 4px solid $orange;
+  color: $orange;
+  background: transparent;
+  font-weight: 600;
   font-size: 32px;
   &:hover {
     background: $link-hover-color;
@@ -275,11 +327,11 @@ $element-border-radius-small: 3px;
   &:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
-    margin-right: 0.8em;
+    margin-right: 0.6em;
     font-size: 0.9em;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    content: "\f061";
+    content: "\f0da";
   }
 }
 
