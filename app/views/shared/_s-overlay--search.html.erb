@@ -10,10 +10,12 @@
 
         <form class="form--chunky">
 
-            <div class="form-group form-group--single-checkbox">
+            <div class="form-group form-group--toggle-switch">
                 <label>
+                    <span>Search London</span>
                     <input type="checkbox"/>
-                    <span>Only search in area shown on map</span>
+                    <span class="toggle"></span>
+                    <span>Search visible area</span>
                 </label>
             </div>
 
@@ -21,90 +23,137 @@
                 <input type="text" placeholder="Enter a place or topic…"/>
             </div>
 
-            <div class="form-group form-group--checklist form-group--replaced-checkboxes">
-                <h2 class="label">Media</h2>
-                <label>
-                    <input type="checkbox" checked="checked"/>
-                    <span>Images</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Video</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Audio</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>File uploads</span>
-                </label>
+            <div class="date-range">
+
+                <div class="subsection-header">
+                    <h1 class="label">Date range</h1>
+                    <!--<p>Pick a start year, and end year…</p>-->
+                    <button>Pick an era</button>
+                </div>
+
+                <div class="date-box date-box--start">
+                    <h2 class="label">Start year</h2>
+                    <input type="text" placeholder="Start year">
+                </div>
+
+                <div class="date-box date-box--start">
+                    <h2 class="label">End year</h2>
+                    <input type="text" placeholder="End year">
+                </div>
+
+                <div class="era-picker">
+
+                    <h2>Choose an era:</h2>
+
+                    <ul class="eras">
+                        <li><a href="#">Early Medieval <span>410-1216</span></a></li>
+                        <li><a href="#">High Medieval <span>1216-1398</span></a></li>
+                        <li><a href="#">Late Medieval <span>1398-1485</span></a></li>
+                        <li><a href="#">Tudor <span>1485-1603</span></a></li>
+                        <li><a href="#">Elizabethan <span>1558-1603</span></a></li>
+                        <li><a href="#">Stuart <span>1603-1714</span></a></li>
+                        <li><a href="#">Hanoverian <span>1714-1837</span></a></li>
+                        <li><a href="#">Victorian <span>1837-1901</span></a></li>
+                        <li><a href="#">Edwardian <span>1901-1914</span></a></li>
+                        <li><a href="#">World War I <span>1914-1918</span></a></li>
+                        <li><a href="#">Interwar <span>1918-1939</span></a></li>
+                        <li><a href="#">Post World War II <span>1945-1999</span></a></li>
+                        <li><a href="#">21st Century <span>2000-Now</span></a></li>
+                    </ul>
+
+                </div>
+
             </div>
 
-            <div class="form-group form-group--checklist form-group--replaced-checkboxes">
-                <h2 class="label">Type</h2>
-                <label>
-                    <input type="checkbox" checked="checked"/>
-                    <span>Places</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>People</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Items</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Events</span>
-                </label>
-            </div>
+            <div class="filters">
 
-            <div class="form-group form-group--checklist form-group--replaced-checkboxes">
-                <h2 class="label">Theme</h2>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Political & government</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Social & health</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Education</span>
-                </label>
-                <label>
-                    <input type="checkbox" checked="checked"/>
-                    <span>Industry & commerce</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Religion & worship</span>
-                </label>
-                <label>
-                    <input type="checkbox"/>
-                    <span>Transport</span>
-                </label>
-                <label>
-                    <input type="checkbox" checked="checked"/>
-                    <span>War & conflict</span>
-                </label>
+                <div class="filters-show">
+                    <button>Filter by Media, Type, Theme</button>
+                </div>
+
+                <div class="filters-content">
+
+                    <div class="form-group form-group--checklist form-group--replaced-checkboxes">
+                        <h2 class="label">Media</h2>
+                        <label>
+                            <input type="checkbox" checked="checked"/>
+                            <span>Images</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Video</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Audio</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Documents</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group form-group--checklist form-group--replaced-checkboxes">
+                        <h2 class="label">Type</h2>
+                        <label>
+                            <input type="checkbox" checked="checked"/>
+                            <span>Places</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>People</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Items</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Events</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group form-group--checklist form-group--replaced-checkboxes">
+                        <h2 class="label">Theme</h2>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Political & government</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Social & health</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Education</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked="checked"/>
+                            <span>Industry & commerce</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Religion & worship</span>
+                        </label>
+                        <label>
+                            <input type="checkbox"/>
+                            <span>Transport</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" checked="checked"/>
+                            <span>War & conflict</span>
+                        </label>
+                    </div>
+
+                </div>
+
             </div>
 
             <div class="form-group">
-                <input type="submit" value="Search"/>
+                <button class="submit-button">Search</button>
             </div>
 
         </form>
-
-        <div class="date-range-link">
-            <a href="#">
-                <h1>Search by date range</h1>
-                <p>You can set a date range too by clicking the clock icon in the tool bar.</p>
-            </a>
-        </div>
 
     </div>
 

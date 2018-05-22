@@ -135,6 +135,11 @@ class Map {
             $(this).text(memoryType[memoryNum] + ' ' + placeNames[placeNum]);
         });
 
+        $('.m-record-card a').each(function () {
+            $(this).data('marker-number', Math.floor(Math.random() * 20));
+        });
+
+
         $('.m-record-card a').not('.m-record-card--collection a').click((event) => {
             $('.m-record h1').text($(event.currentTarget).find('h1').text());
             this.showOverlay('record');
@@ -142,7 +147,7 @@ class Map {
         });
 
         $('.m-record-card a').not('.m-record-card--collection a').hover((event) => {
-            bounceRandomMarker();
+            bounceRandomMarker($(event.currentTarget).data('marker-number'));
             event.preventDefault();
         });
 
@@ -175,6 +180,7 @@ class Map {
             $('.m-map-wrapper').addClass('showing-place-picker');
             $('.m-place-picker').addClass('is-showing');
             hideAllMarkers();
+            setMapCursorCrosshair();
         });
         $('.m-tool-button--your-account').click((event) => {
             this.showOverlay('your-account--details');
@@ -289,14 +295,37 @@ class Map {
 
     setupSearchOverlay() {
 
-        $('.m-search-overlay input[type="submit"]').click((event) => {
+        $('.m-search-overlay button.submit-button').click((event) => {
             this.hideOverlay();
             showPlaceMarkers();
             var searchTerm = $('.m-search-overlay input[type="text"]').val();
-            $('.m-tray-title-area--search-results h1').text('"' + searchTerm + '"');
+            $('.m-tray-title-area--search-results h1').text('“' + searchTerm + '”');
             this.showTrayContent('search-results');
             event.preventDefault();
         });
+
+        $('.m-search-overlay .filters-show button').click((event) => {
+            $('.m-search-overlay .filters').toggleClass('is-open');
+            event.preventDefault();
+        });
+
+        $('.m-search-overlay .date-range .subsection-header button').click((event) => {
+            $('.m-search-overlay .date-range .era-picker').toggle();
+            event.preventDefault();
+        });
+
+        $('.form-group--toggle-switch .toggle').click((event) => {
+            $(event.currentTarget).parent().parent().toggleClass('is-toggled');
+            //event.preventDefault();
+        });
+
+
+
+  /*      $('.m-search-overlay .date-range .subsection-header button').click((event) => {
+            $('.m-search-overlay .date-range .era-picker').toggle();
+            event.preventDefault();
+        });*/
+
 
     }
 
@@ -322,7 +351,7 @@ class Map {
     setupLayersOverlay() {
 
         $('.m-layers-picker a').click((event) => {
-            $(event.currentTarget).find('button').toggleClass('is-selected');
+            $(event.currentTarget).parent().toggleClass('is-selected');
             event.preventDefault();
         });
 
@@ -437,6 +466,7 @@ class Map {
             $('.m-add-record').removeClass('is-edit-mode');
             this.showOverlay('add-record');
             $('.m-map-wrapper').removeClass('showing-place-picker');
+            setMapCursorDefault();
             showAllMarkers();
         }
 

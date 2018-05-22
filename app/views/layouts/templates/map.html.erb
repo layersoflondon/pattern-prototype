@@ -16,13 +16,10 @@
     <div class="m-map-wrapper">
 
         <div class="m-sidebar">
-            <div class="m-logo"><%= image_tag("logo.svg") %></div>
+            <div class="m-logo"><a href="/pages/homepage"><%= image_tag("logo.svg") %></a></div>
             <div class="m-tools">
                 <div class="m-tool-button m-tool-button--search">
                     <button data-label="Search"><span>Search</span></button>
-                </div>
-                <div class="m-tool-button m-tool-button--date-range">
-                    <button data-label="Date range"><span>Date range</span></button>
                 </div>
                 <div class="m-tool-button m-tool-button--layers">
                     <button data-label="Layers"><span>Layers</span></button>
@@ -135,6 +132,7 @@
                             fullscreenControl: false,
                             streetViewControl: false,
                             clickableIcons: false,
+                            disableDefaultUI: true,
                             styles: [
                                 {
                                     "elementType": "geometry",
@@ -453,7 +451,7 @@
                         }
                     }
 
-                    function bounceRandomMarker() {
+                    function bounceRandomMarker(markerNumber) {
 
                         randomMarker = Math.floor(Math.random() * recordMarkers.length);
 
@@ -461,9 +459,17 @@
                             recordMarkers[i].setIcon(recordImage);
                         }
 
-                        recordMarkers[randomMarker].setIcon(recordImageHighlighted);
+                        recordMarkers[markerNumber].setIcon(recordImageHighlighted);
                         //recordMarkers[randomMarker].setAnimation(google.maps.Animation.BOUNCE);
 
+                    }
+
+                    function setMapCursorCrosshair() {
+                        map.setOptions({draggableCursor:'crosshair'});
+                    }
+
+                    function setMapCursorDefault() {
+                        map.setOptions({draggableCursor:''});
                     }
 
                     function showAllMarkers() {
@@ -488,9 +494,8 @@
             <div class="m-map-layer-controls"></div>
         </div>
 
-        <div class="m-overlay is-showing">
+        <div class="m-overlay">
             <%= render "shared/s-overlay--search" %>
-            <%= render "shared/s-overlay--date-range" %>
             <%= render "shared/s-overlay--layers" %>
             <%= render "shared/s-overlay--add-collection" %>
             <%= render "shared/s-overlay--add-record" %>
