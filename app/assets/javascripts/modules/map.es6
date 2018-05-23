@@ -182,6 +182,16 @@ class Map {
             hideAllMarkers();
             setMapCursorCrosshair();
         });
+        $('.m-tool-button--your-content').click((event) => {
+            $('.m-tray-title-area--search-results h1').text('Your records & collections');
+
+            $('.m-sidebar').addClass('is-inactive');
+            setTimeout(function() {
+                $('.m-sidebar').removeClass('is-inactive');
+            }, 2000);
+
+            this.showTrayContent('search-results');
+        });
         $('.m-tool-button--your-account').click((event) => {
             this.showOverlay('your-account--details');
         });

@@ -6,9 +6,26 @@ class VisualHelpers {
         this.setupVisibleTriggers();
         this.setupRandomImages();
         this.setupRandomTitles();
+        this.setupSearchSubmit();
+        this.setupRecordCardClicks();
 
     }
 
+    setupRecordCardClicks() {
+        $(document).ready(function () {
+            $('.m-highlighted-content a').click(function () {
+                window.location.href = '/pages/map';
+            });
+        });
+    }
+
+    setupSearchSubmit() {
+        $(document).ready(function () {
+            $('.m-big-search').click(function () {
+                window.location.href = '/pages/map';
+            });
+        });
+    }
 
     setupVisibleTriggers() {
 
@@ -20,7 +37,7 @@ class VisualHelpers {
             });
 
 
-            setTimeout(function(){
+            setTimeout(function () {
                 $(".viewable").each(function (i, el) {
                     var el = $(el);
                     if (el.visible(true)) {
@@ -28,7 +45,7 @@ class VisualHelpers {
                         el.addClass("is-viewable");
                     }
                 });
-            },100);
+            }, 100);
 
         });
 
