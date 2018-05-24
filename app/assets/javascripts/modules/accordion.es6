@@ -15,11 +15,11 @@ class Accordion {
                 $('.m-accordion .pane').slideUp('fast');
                 $('.m-accordion .section').removeClass('is-open');
                 $(event.currentTarget).parent().addClass('is-open');
-                $(event.currentTarget).next().slideDown('fast');
+                $(event.currentTarget).next().slideDown(600);
             } else {
                 //It's open
                 $(event.currentTarget).parent().removeClass('is-open');
-                $(event.currentTarget).next().slideUp('fast');
+                $(event.currentTarget).next().slideUp(600);
             }
             event.preventDefault();
         });

@@ -48,7 +48,7 @@
             </div>
 
             <div class="form-group">
-                <label>Description</label>
+                <label>Content</label>
                 <textarea rows="10" placeholder=""></textarea>
             </div>
 
@@ -59,32 +59,33 @@
                     <div class="pane">
                         <div class="m-add-media-and-documents">
 
+                            <div class="add-tools">
+
+                                <div class="form-group add-file">
+                                    <a href="#"><span class="image"></span><em>Upload</em></a>
+                                </div>
+
+                                <div class="form-group add-url">
+                                    <label>Add by URL (Youtube or SoundCloud URL)</label>
+                                    <input type="text" placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"/>
+                                    <button>+</button>
+                                </div>
+
+
+
+                            </div>
+
                             <div class="thumbs">
 
                                 <ul>
-                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a>
-                                    </li>
-                                    <li class="type-image is-selected">
-                                        <a href="#"><span class="image random-image"></span></a></li>
-                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a>
-                                    </li>
-                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a>
-                                    </li>
-                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a>
-                                    </li>
-                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a>
-                                    </li>
-                                    <li class="add"><a href="#"><span class="image"></span><em>Drag & drop</em></a>
-                                    </li>
+                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="type-image is-selected"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="type-image"><a href="#"><span class="image random-image"></span></a></li>
+                                    <li class="add"><a href="#"><span class="image"></span><!--<em>Drag & drop</em>--></a></li>
                                 </ul>
-
-                                <div class="add-by-url">
-                                    <div class="form-group">
-                                        <label>Add by URL (Youtube or SoundCloud URL)</label>
-                                        <input type="text" placeholder="URL"/>
-                                    </div>
-                                    <button>Add</button>
-                                </div>
 
                             </div>
 
@@ -103,8 +104,15 @@
                                         <label>Credit</label>
                                         <input type="text" placeholder="Credit"/>
                                     </div>
+                                    <div class="form-group form-group--single-checkbox">
+                                        <!--<p class="helper-text">Allow users to contact you</p>-->
+                                        <label>
+                                            <input type="checkbox" checked="checked"/>
+                                            <span>Set as primary image</span>
+                                        </label>
+                                    </div>
                                     <div class="form-group">
-                                        <button>Set as primary image</button>
+                                        <button>Save</button>
                                     </div>
                                 </div>
                             </div>

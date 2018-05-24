@@ -173,7 +173,7 @@ input[type="submit"] {
 }
 
 .form--over-white a {
-  color: $orange;
+  color: $red;
 }
 
 .form--chunky .form-group {
@@ -223,6 +223,8 @@ input[type="submit"] {
   text-transform: none;
   font-size: 16px;
   padding-left: 25px;
+  background:transparent;
+  color:$black;
 }
 
 .form--chunky .form-group--checkboxes-columns input {
