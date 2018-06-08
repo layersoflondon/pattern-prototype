@@ -194,7 +194,7 @@ class Map {
             $('.m-map-wrapper').toggleClass('tray-is-closed');
         });
 
-        $('.m-tray-title-area .close button').click((event) => {
+        $('.m-tray-title-area .close a').click((event) => {
             this.showTrayContent('default');
         });
 
